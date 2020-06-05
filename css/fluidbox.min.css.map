@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/fluidbox.scss"
+    ],
+    "names": [],
+    "file": "fluidbox.min.css"
+}

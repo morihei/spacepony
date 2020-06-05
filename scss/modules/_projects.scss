@@ -1,0 +1,427 @@
+.mainContentSectionArea{
+    .mainContentContainer{
+
+        .projectIntro{
+            z-index: -1;
+            min-height: 50vh;
+            width: 100%;
+            .imageHolder{
+                width: 100%;
+                position: absolute;
+                pointer-events: none;
+                max-width: 100%;
+                overflow: hidden;
+                background-size: cover;
+                background-position: center;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                video{
+                   height: 50vh;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+                    .headerWrapper{
+                        display: flex;
+                        height: 100%;
+                        .quoteMain{
+                            display: flex; 
+                            flex-direction: column; 
+                            flex: 1;
+                            justify-content: flex-end;  
+                            .quoteWrapper{
+                                padding: 5em;
+                                h1{
+                                    @include fontSize(44px);
+                                    @include letterSpacing(6px); 
+                                     font-family: $klavika-medium;
+                                    text-transform: uppercase;
+                                    
+                                } 
+                                p{
+                                    margin-top: 1em;
+                                    @include fontSize(30px);
+                                    @include letterSpacing(1px); 
+        
+        
+                        }
+                    }
+                }
+            }
+        }
+        .introWrapper{
+            background: #060610;
+            .introContainer{
+                max-width: $maxWidth;
+                margin: 0 auto;
+                padding: 16em 3em 0em 3em;
+                @include biggerPhone{
+                    padding: 7em 2em 0em 2em;
+                }
+                p{
+                    @include paragraphStyle;
+                }
+                h4{
+                    margin: 0;
+                    padding: 8em 0;
+                    @include fontSize(28px);
+                    @include biggerPhone{
+                    padding: 5em 0;
+
+                    }
+                    sub{
+                       display: flex;
+                       flex-flow: column;
+                        &::after{
+                            margin-left: 25px;
+                            margin-top: 2px;
+                           content: '';
+                           border-bottom: 1px solid rgba($font-color-primary, 0.21);
+                           display: -webkit-box;
+                           display: -ms-flexbox;
+                           display: flex;
+                        }
+                    }
+                }
+            }
+        }
+        .projectList{
+            .projectListWrapper{
+                .projectListContainer{
+                    .tab-wrapper{
+                        background: #060610;
+                        &.sticky{
+                            position: fixed;
+                            left: 0;
+                            top: 0;
+                            right: 0;
+                            z-index: 100;
+                            background: #0f0f19;
+                            .tab-navigation{
+                                ul{
+                                    li{
+                                        a{
+                                            &::before{
+                                                background: #0f0f19;
+                                                transition: 0.01s ease-in-out;
+        
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    .tab-navigation{
+                        max-width: $maxWidth;
+                        margin: 0 auto;
+                        padding: 1em 2em 2.5em 2em;
+                        @include biggerPhone{
+                            padding: 1em 0 2em 0;
+                        }
+                        .cd-tabs__navigation{
+                            @include biggerPhone{
+                                grid-column: 1 / -1;
+                                overflow-y: hidden;
+                                margin-bottom: calc(-.1 * 20px);
+                            }
+                            ul{
+                                display: flex;
+                                @include biggerPhone{
+                                    display: grid;
+                                    grid-gap: 10px;
+                                    grid-template-columns: 100px repeat(4, calc(50% - 10px * 2)) 10px;
+                                    overflow-x: scroll;
+                                    scroll-snap-type: x proximity;
+                                    padding-bottom: calc(.65 * 20px);
+                                    margin-bottom: calc(-.5 *20px);
+                                    &::before{
+                                        content: ‘’;
+                                    }
+                                    &::after{
+                                        content: ‘’;
+                                    }
+                                }
+                                li{
+                                    display: flex;
+                                    justify-content: space-around;
+                                    flex: 1;
+                                    @include biggerPhone{
+                                        flex: none;
+                                        scroll-snap-align: center;
+                                        padding: calc(0px / 2 * 1.5);
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+                                    a{
+                                    padding: 1em .3em 1em .3em;
+                                    position: relative; 
+                                     font-family: $klavika-light;
+                                     font-size: 16px;
+                                     text-transform: uppercase;
+                                     opacity: .7;
+                                     letter-spacing: .2em;
+                                     opacity: 0.6;
+                                     border-bottom: 3px solid rgba($font-color-third, $alpha: 1);
+                                     transition: all 0.2s ease-in-out;
+                                     @include biggerPhone{
+                                         display: flex;
+                                         text-align: center;
+                                     }
+                                     @include tablet{
+                                     font-size: 14px;
+
+                                     }
+                                     &:hover{
+                                         opacity: 0.8;
+                                         transition: all 0.2s ease-in-out;
+                                         @include tabFlicker;
+                                         &::before{
+                                        transform: scaleX(0);
+                                        transition: 0.2s ease-in-out;
+        
+                                         }
+                                     }
+                                     &::before{
+                                        content: '';
+                                        position: absolute;
+                                        top: -4px;
+                                        left: 3px;
+                                        width: calc(100% + -6px);
+                                        height: calc(100% - -8px);
+                                        background: #06060f;
+                                        transition: 0.2s ease-in-out;
+                                        transform: scaleX(1);
+                                    } 
+                                    &::after{
+                                        content: '';
+                                        height: 1px;
+                                        border-bottom: 1px solid rgba(246, 246, 246, 0.2);
+                                        position: absolute;
+                                        bottom: -2px;
+                                        left: 0;
+                                        right: 0;
+                                    }
+                                    span{
+                                        z-index: 3;
+                                        position: relative;
+                                         }
+                                         &.cd-tabs__item--selected{
+                                             
+                                              opacity: 1;
+                                              color: $font-color-third;
+                                              font-family: $klavika-medium;
+                                              position: relative;
+                                              border: none;
+                                              display: flex;
+                                              justify-content: center;
+                                              align-items: center;
+                                              outline: none;
+                                              border-bottom: 3px solid rgba($font-color-third, $alpha: 1);
+                                              &::before{
+                                             transform: scaleX(0);
+             
+                                                 }
+                                             }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .cd-tabs__panel{
+                        margin-top: 19em;
+                        @include biggerPhone{
+                            margin-top: 7em;
+                        }
+                    
+                    .projectOuter{
+                        transform:perspective(270px) skew(0deg, 0deg) rotateY(-5deg);
+                        transform-origin: right 50%;
+                        transition-timing-function: cubic-bezier(.24,.01,.69,1);
+                        transition: all .5s ease; 
+                        &.focused{
+                        transform:perspective(270px) skew(0deg, 0deg) rotateY(0deg);
+                        transition: all .5s ease; 
+                        transition-timing-function: cubic-bezier(.24,.01,.69,1);
+
+                        }
+                        .thumb-hover-info-project{
+                            padding: 5em 4em;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            @include biggerPhone{
+                            padding: 3em 2em;
+
+                            }
+                            .header-holder{
+                                margin: 0;
+                                padding: 0;
+                                display: flex;
+                                flex-direction: column;
+                                flex: 1;
+                                .title{
+                                    padding-bottom: 15px;
+                                    @include fontSize(38px);
+                                    @include letterSpacing(8px); 
+                                    font-family: $klavika-medium;
+                                    text-transform: uppercase;
+                                    color: rgba($font-color-primary, $alpha: 1); 
+                                    transition: color .3s ease-in-out;
+                                    @include tablet{
+                                    @include fontSize(34px);
+
+                                    }
+                                    @include biggerPhone{
+                                        @include fontSize(34px);
+    
+                                        }
+                                }
+                                .category{
+                                    position: relative;
+                                    font-family: $klavika-light;
+                                    display: flex;
+                                    align-items: center;
+                                    opacity: .6;
+                                    transition: opacity .3s ease-in-out;
+                                    @include fontSize(28px);
+                                    @include biggerPhone{
+                                    @include fontSize(22px);
+
+                                    }
+                                    span{
+                                        padding: 0 20px;
+                                        font-size: 10px;
+                                    }
+                                    .line{
+                                        opacity: 0;
+                                        transition: opacity .2s ease-in-out;
+                                        display: flex;
+                                        margin: 1px 15px 0 2em;
+                                        display: flex;
+                                        flex: 1;
+                                        border-bottom: 1px solid;
+                                        sub{
+                                            margin-left: -15px;
+                                            display: flex;
+                                            flex-flow: column;
+                                        
+                                         }
+                                    }
+                                }
+                            }
+                            .year{
+                                padding: 0;
+                                margin: 0;
+                                font-family: $klavika-light;
+                                @include fontSize(26px);
+                                @include letterSpacing(3px); 
+                                text-transform: uppercase;
+                                opacity: 0.6;
+                               transition: opacity .3s ease-in-out;
+                                @include biggerPhone{
+                                @include fontSize(22px);
+
+                                }
+                            }
+                            &.active{
+                                .header-holder{
+                                .title{
+                                   color: rgba($font-color-third, $alpha: 1); 
+                                   transition: color .3s ease-in-out;
+
+                                }
+                                .category{
+                                    opacity: 1;
+                                    transition: opacity .3s ease-in-out;
+                                    @include tabFlicker;
+                                    .line{
+                                    @include tabFlicker;
+
+                                        opacity: .8;
+                                        transition: opacity .2s ease-in-out;
+                                      }
+                                  }
+                                }
+                                .year{
+                                    opacity: 1;
+                                    transition: opacity .3s ease-in-out;
+                                }
+                            }
+                        }
+                    .project{
+                        &.bigger-column{
+                            margin-bottom: 16em;
+                            @include biggerPhone{
+                                margin-bottom: 7em;
+                            }
+                        }
+                     
+                        a{
+                            .thumb-inner{
+                                position: relative;
+                                overflow: hidden;
+                                &:hover{
+                                    .thumb-hover{
+                                        @include opacity(1);
+                                       transition: opacity 0.3s ease-in-out;
+                                       .background-video{
+                                        @include opacity(1);
+    
+                                       transition: opacity 0.5s ease-in-out;
+    
+                                        }
+                                    }
+                                }
+                                .thumb-hover{
+                                    @include opacity(0);
+                                    transition: opacity 0.3s ease-in-out;
+    
+                                    .background-video{
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background-repeat: no-repeat;
+                                        background-size: auto;
+                                         @include opacity(0);
+                                        z-index: 10;
+                                       transition: opacity 0.5s ease-in-out;
+    
+                                         video{
+                                            object-fit: cover;
+                                            width: 100%;
+                                            height: 100%;
+                                         }
+                                    }
+                                 
+                                }
+    
+                                img{
+                                    max-width: 100%;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    @include biggerPhone{
+                                        min-height: 150px;
+                                    }
+                                    &:first-child, &:nth-child(4), &:nth-child(7){
+                                        grid-column: 1/3;
+                                         }
+                                      }
+                                  }
+                               }
+                           }
+                       }
+                    }
+                }
+            }
+        }
+    }
+}

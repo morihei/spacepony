@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64341477-2575-45e5-b648-8e61a6c7c9a6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1ZcldmHtVqlR4o1Y86iAL8ZBkyN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64341477-2575-45e5-b648-8e61a6c7c9a6" name="Default Changelist" comment="" />
+      <created>1585146352365</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585146352365</updated>
+      <workItem from="1585146355953" duration="591000" />
+      <workItem from="1585148541343" duration="217000" />
+      <workItem from="1585148804364" duration="25000" />
+      <workItem from="1585149053109" duration="91000" />
+      <workItem from="1585149179258" duration="115000" />
+      <workItem from="1585149837576" duration="239000" />
+      <workItem from="1585150299692" duration="468000" />
+      <workItem from="1585151926504" duration="146000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="469" y="222" key="SettingsEditor" timestamp="1585149885670">
+      <screen x="0" y="22" width="1920" height="1122" />
+    </state>
+    <state x="469" y="222" key="SettingsEditor/0.22.1920.1122@0.22.1920.1122" timestamp="1585149885670" />
+  </component>
+</project>

@@ -1,0 +1,327 @@
+
+
+/*----------lightbox holder wrapper----------------*/
+@-moz-document url-prefix() {
+    .lightBoxBackgroundWrapper{
+
+        .buttonHolder{
+ 
+            top:55px !important;
+        }
+    }
+  }
+
+
+
+/*----------image holder wrapper----------------*/
+.mainContentSectionArea{
+
+    .mainContentContainer{
+
+        .aboutIntro{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            .imageHolder{
+                height: 100vh;
+                display: flex;
+                @include biggerPhone{
+                    max-height: 45vh;
+                }
+                video{
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100%;
+                    object-fit: cover;
+                }
+
+            }
+        }
+
+        /*----------what is holder wrapper----------------*/
+        .whoIs{
+            @include box-shadow(0px, 35px, 50px, 0px, rgba(115, 196, 234, 0.35));
+
+            .whoContainer{
+                max-width: $maxWidth;
+                margin: 0 auto;
+                padding: 16em 3em 12em 3em;
+                @include biggerPhone{
+                padding: 7em 2em;
+                }
+            .whoIsHolder{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .info-pony, .info{
+                    flex: 1;
+                    padding-right: 7em;
+                    @include biggerPhone{
+                        flex: initial;
+                        padding: 0 0 7em 0;
+                    }
+                    h1{
+                       @include header1;
+                    }
+                    p{
+                        @include paragraphStyle;
+                        @include biggerPhone{
+                            margin-bottom: 2em;
+                        }
+                    }
+                }
+                .services{
+                    //flex-basis: 30%;
+
+                    h1{
+                        @include header1;
+
+                    }
+                    .serviceList{
+                        ul{
+                            padding-left: 1em;
+                            display: flex;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            @include biggerPhone{
+                                flex-direction: initial;
+                                flex-wrap: wrap;
+                            }
+                            li{
+                                position: relative; 
+                                @include biggerPhone{
+                                    padding: 1em;
+                                }
+                                    &:before{
+                                        margin-top: 8px;
+                                        content: url("/img/icons/bullet-quote.svg");
+                                        height: 8px;
+                                        width: 8px;
+                                        display: flex;
+                                        position: absolute;
+                                        left: 0px;
+                                        @include biggerPhone{
+                                        margin-top: 4px;
+
+                                        }
+                                    }
+
+                                p{
+                                    margin-bottom: 1em;
+                                    padding: 0px 1em 0 1.5em;
+                                 @include paragraphStyle;
+
+                                }
+                            }
+                        }
+                    }
+                }
+                  
+            }
+                .whoIsLower{
+                    padding-top: 20em;
+                    @include biggerPhone{
+                        padding-top: 14em;
+                    }
+                 .clients{
+
+                     h1{
+                         @include header1;
+                         }
+                         p{
+                             @include paragraphStyle;
+                            }
+                            ul{
+                                margin-top: 10em;
+                                /* 
+                                display: grid;
+                                grid-template-columns: repeat(5, 1fr);
+                                grid-gap: 50px;
+                                grid-row-gap: 8em;
+                                grid-auto-flow: dense;
+                                grid-auto-rows: minmax(auto, auto);*/
+                                li{
+                                     &.plus{
+                                        img{
+                                            max-width: 65px;
+                                        }
+                                    }
+                                    &.nio, &.foreo{
+                                        img{
+                                            max-width: 180px;
+                                            @include tablet{
+                                                max-width: 150px;
+                                            }
+                                            @include biggerPhone{
+                                                max-width: 145px;
+                                            }
+                                        }
+                                    }
+                                    &.dyson, &.lelo{
+                                        img{
+                                            max-width: 150px;
+                                            @include biggerPhone{
+                                            max-width: 140px;
+
+                                            }
+                                        }
+                                    }
+                                    @include fontSize(28px);
+                                    display: flex;
+                                    flex-direction: column;
+                                   // align-items: center;
+                                     padding: 2em 0;
+                                     @include biggerPhone{
+                                         padding: 1em 0;
+                                     }
+                                     .clientDesc{
+                                        margin-top: 2em;
+                                        display: flex;
+                                        flex-direction: column;
+                                        .roleWrapper{
+                                            margin-bottom: 1.5em;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            @include biggerPhone{
+                                                align-items: flex-start;
+                                                flex-direction: column;
+                                            }
+                                            h3{
+                                                @include biggerPhone{
+                                                    margin-bottom: 1.4em;
+                                                    sub{
+                                                        font-size: 70%;
+                                                    }
+                                                }
+                                                span{
+                                                    font-family: $klavika-medium;
+                                                    @include letterSpacing(2px);
+                                                    @include fontSize(24px);  
+                                                    margin: 0 .5em;
+                                                    text-transform: uppercase;
+                                                    @include biggerPhone{
+                                                    @include fontSize(18px);  
+
+                                                    }
+                                                }
+                                            }
+                                            h5{
+                                                display: flex;
+                                                align-items: center;
+                                                color: rgba($font-color-primary, 0.8);
+                                                img{
+                                                    margin: 0;
+                                                    height: 30px;
+                                                    width: 30px;
+                                                    margin-right: 10px;
+   
+                                                }
+                                            }
+                                        }
+                                         h4{
+                                             margin: 4em 0;
+                                             sub{
+                                                display: flex;
+                                                flex-flow: column;
+                                                 &::after{
+                                                     margin-left: 25px;
+                                                     margin-top: 2px;
+                                                    content: '';
+                                                    border-bottom: 1px solid rgba($font-color-primary, 0.21);
+                                                    display: -webkit-box;
+                                                    display: -ms-flexbox;
+                                                    display: flex;
+                                                 }
+                                             }
+                                         }
+                           
+                                     }
+                                    img{
+                                        margin-bottom: 1em;
+                                        max-width: 100%;
+                                        width: 240px;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .socials{
+                            padding-top: 20em;
+                            @include tablet{
+                            padding-top: 12em;
+                                
+                            }
+                            @include biggerPhone{
+                                padding-top: 7em;
+                            }
+                            h1{
+                                @include header1;
+                                
+                            }
+                            p{
+                                @include paragraphStyle;
+                                
+                                
+                            }
+                            .socialContainer{
+                                display: flex;
+                                justify-content: space-between;
+                                @include biggerPhone{
+                                    flex-wrap: wrap;
+                                }
+                            
+                        a{
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            &:before{
+                                content: url("/img/icons/bullet-text.svg");
+                                height: 8px;
+                                width: 8px;
+                                display: flex;
+                                justify-content: flex-start;
+                                flex-direction: row;
+                                float: left;
+                                align-items: center;
+                                margin-top: -2px;
+                                position: absolute;
+                                left: 0px;
+                                transition: left 0.3s ease-in-out;
+                            }
+                            font-family: $klavika-light;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            padding: 1.5em;
+                            opacity: .7;
+                            letter-spacing: .2em;
+                            opacity: 0.6;
+                            transition: opacity 0.3s ease-in-out;
+                            @include tablet{
+                            font-size: 14px;
+                                
+                            }
+                            @include biggerPhone{
+                                padding: 1.5em 2em;
+                                font-size: 14px;
+    
+                                }
+                            &:hover{
+                                opacity: 0.8;
+                                transition: opacity 0.3s ease-in-out;
+                                &:before{
+                                    left: 5px;
+                                transition: left 0.3s ease-in-out;
+        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+ 
+

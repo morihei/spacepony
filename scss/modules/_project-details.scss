@@ -1,0 +1,316 @@
+
+
+/*----------lightbox holder wrapper----------------*/
+@-moz-document url-prefix() {
+    .lightBoxBackgroundWrapper{
+
+        .buttonHolder{
+ 
+            top:55px !important;
+        }
+    }
+  }
+
+
+
+/*----------image holder wrapper----------------*/
+.mainContentSectionArea{
+
+    .mainContentContainer{
+
+        .iframe-container{
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; 
+            height: 0;
+            iframe{
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        /*----------what is holder wrapper----------------*/
+        .projectDescription{
+            .infoContainer{
+                max-width: $maxWidth;
+                margin: 0 auto;
+                padding: 25em 2em 12em 2em;
+                @include tablet{
+                padding: 15em 3em 12em 3em;
+
+                }
+                @include biggerPhone{
+                    padding: 12em 2em;
+    
+                    }
+            .descriptionHolder{
+                display: flex;
+                justify-content: space-between;
+                @include tablet{
+                    flex-direction: column;
+                }
+                @include biggerPhone{
+                    flex-direction: column;
+                }
+                .project-info, .year{
+                    h1{
+                        @include header1;
+                    }
+                    p{
+                        @include paragraphStyle;
+                    }
+                }
+                .category{
+                        @include tablet{
+                            padding: 6em 0;
+                        }
+                        @include biggerPhone{
+                            padding: 6em 0;
+                        }
+                    h1{
+                        @include header1;
+
+                    }
+                    .categoryList{
+                        ul{
+                            display: flex;
+                            align-items: center;
+                            @include biggerPhone{
+                                flex-wrap: wrap;
+                            }
+                        
+                            li{
+                                @include biggerPhone{
+                                    padding: 1em 0;
+                                }
+                                p{
+                                    margin: 0;
+                                    @include paragraphStyle;
+                                    span{
+                                        padding:0 2em;
+                                        font-size: 10px;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+                  
+            }
+                .description{
+                    padding-top: 12em;
+                 @include tablet{
+                     padding-top: 6em;
+                 }
+                 @include biggerPhone{
+                    padding-top: 6em;
+                }
+                            h1{
+                                @include header1;
+                
+                            }
+                            .synopsisContainer{
+                                display: flex;
+                                p{
+                                    @include paragraphStyle;
+                                    
+                                }
+
+                            }
+                        }
+                }
+        }
+        .project-background{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            video{
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+        .description-two{
+            width: 100%;
+            height: 100%;
+           // background: repeat center #02081596 url("/img/icons/grid-pattern.svg");
+           // background-size: 75px 75px;
+            .descContainer{
+                max-width: $maxWidth;
+                margin: 0 auto;
+                padding: 20em 2em;
+                @include tablet{
+                padding: 12em 3em;
+
+                }
+                @include biggerPhone{
+                    padding: 7em 2em;
+    
+                    }
+                h3{
+                             margin-bottom: 10px;
+                            font-family: $klavika-medium;
+                            @include fontSize(50px);
+                            @include letterSpacing(2px);
+                            @include opacity(.3);
+                            @include tablet{
+                                @include fontSize(34px);
+
+                                }
+                            sup{
+                             font-family: $klavika-light;
+                             @include fontSize(38px);
+                             @include tablet{
+                                @include fontSize(24px);
+
+                                }
+                            }
+                }
+                h1{
+                    margin-bottom: 2em;
+                    @include fontSize(40px);
+                    @include letterSpacing(6px); 
+                     font-family: $klavika-medium;
+                    text-transform: uppercase;
+                    @include tablet{
+                        @include fontSize(32px);
+
+                        }
+                        @include biggerPhone{
+                            margin-bottom: 1.5em;
+                            @include fontSize(36px);
+    
+                            }
+                }
+                .description-process{
+                display: flex;
+                    p{
+                     @include paragraphStyle;
+                    }
+                }
+            }
+        }
+        .gallery-screens{
+            padding-bottom: 12em;       
+            //@include box-shadow(0px, 35px, 50px, 0px, rgba(115, 196, 234, 0.35));
+            @include tablet{
+                padding-bottom: 6em;
+            }
+            @include biggerPhone{
+                padding: 0;
+            }
+            .screensContainer{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+                grid-auto-flow: dense;
+                grid-auto-rows: minmax(auto, auto);
+                @include tablet{
+                    grid-gap: 5px;
+                }
+                @include biggerPhone{
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-gap: 5px;
+
+                }
+                .imageWrapper{
+                    width: 100%;
+                    height: 100%;
+                    //overflow: hidden;
+                
+                img{
+                    max-width: 100%;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  
+                    }   
+                }
+             }
+             .swiper-container{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                     max-width: 100%;
+                }
+                .scrollDirecion{
+                  @include fontSize(24px);
+                   text-transform: uppercase;
+                   display: flex;
+                   align-items: center;
+                   &:hover{
+                       .scrollArrowLeft{
+                           margin-left: 0px;
+                           opacity: 1;
+                           transition: all 0.3s ease;
+
+                       }  
+                       .scrollArrowRight{
+                           margin-right: 0px;
+                           opacity: 1;
+                           transition: all 0.3s ease;
+
+                       } 
+                       .bullet{
+                           margin: 10px;
+                           transition: margin 0.3s ease;
+
+                       }
+                   }
+                   .scrollArrowLeft{
+                       margin-left: 5px;
+                       display: flex;
+                       width: 10px;
+                       height: 30px;
+                       background: no-repeat center url("/img/icons/arrow-left.svg");
+                       opacity: .5;
+                       background-size: cover; 
+                       transition: all 0.3s ease;
+
+                   }
+                   .bullet{
+                       background: no-repeat center url("/img/icons/bullet.svg");
+                       width: 9px;
+                       height: 9px; 
+                       margin: 15px;
+                       transition: margin 0.3s ease;
+                       
+                   }
+                   .scrollArrowRight{ 
+                       margin-right: 5px;
+                       display: flex; 
+                       width: 10px;
+                       height: 30px;
+                       background: no-repeat center url("/img/icons/arrow-right.svg");
+                       background-size: cover; 
+                       opacity: .5; 
+                       transition: all 0.3s ease;
+
+
+                       }
+                 }
+               /*  .bottomSecondary{
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+                    right: 0;
+                     padding: 1em 2.5em;
+                     display: flex;
+                     height: 75px;
+                     align-items: center;
+                     justify-content: space-between;
+                 }*/
+             }
+        }
+    }
+}
+ 
+

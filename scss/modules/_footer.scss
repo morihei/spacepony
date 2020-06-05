@@ -1,0 +1,373 @@
+// File Name: _footer.scss
+// Description: global footer styles
+// Used by: Page.scss
+// Dependencies:
+// ------------------------------------------------------------
+footer{
+    background: #f6f6f6;
+    color: #000;
+    .footerContainer{
+        padding: 1em 2em 3em 2em;
+        @include tablet{
+        padding: 4em 2em 3em 2em;
+
+        }
+        @include biggerPhone{
+            padding: 4em 2em 3em 2em;
+    
+            }
+        .footerWrapper{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            .footerInner{
+                
+                    flex-direction: column-reverse;
+                    display: flex;
+                
+            .emailContainer{
+                padding-top: 2em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include tablet{
+                    align-items: flex-start;
+                    flex-direction: column;
+                    img{
+                        display: none !important;
+                        height: 50px;
+                    }
+                }
+                @include biggerPhone{
+                    align-items: flex-start;
+                    flex-direction: column;
+                    img{
+                        display: none !important;
+                        height: 50px;
+                    }
+                }
+                img{
+                    margin-left: 10px;
+                    height: 55px;
+                    display: flex;
+                    -webkit-filter: invert(100%); /* Safari/Chrome */
+                    filter: invert(100%);
+                }
+                .emailCategory{
+                        display: flex;
+                        justify-content: flex-end;
+                        padding: 0em 2em;
+                        align-items: center;
+                        @include tablet{
+                            padding: 1em 1.5em 2em; 
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                        @include biggerPhone{
+                            width: 100%;
+                            padding: 2em 0 2em; 
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                    h3{
+                        sub{
+                            display: none;
+                        }
+                        display: none;
+                        @include tablet{
+                            display: flex;
+                            padding: 0;
+                            margin: 0px 0px 25px 0;
+                            text-transform: uppercase;
+                            font-family: $klavika-medium;
+                            @include letterSpacing(4px);
+                            @include fontSize(22px);
+
+                        }
+                        @include biggerPhone{
+                            display: flex;
+                            align-items: center;
+                            padding: 0;
+                            width: 100%;
+                            margin: 0px 0px 25px 0;
+                            text-transform: uppercase;
+                            font-family: $klavika-medium;
+                            @include letterSpacing(4px);
+                            @include fontSize(22px);
+                            sub{
+                                padding-left: 8px;
+                                display: flex;
+                                flex: 1;
+                                &::after{
+                                    margin-left: 5px;
+                                    content: '';
+                                    border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    flex: 1;
+                                }
+                            }
+                        }
+                    }
+                    a{
+                        color: #111;
+                        letter-spacing: 0.05em;
+                        font-size: 16px;
+                        opacity: .7;
+                        position: relative;
+                        transition: opacity 0.3s ease-in-out;
+                       @include biggerPhone{
+                           font-family: $klavika-light;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        padding: 1em;
+                        opacity: .7;
+                        letter-spacing: .2em;
+                        opacity: 0.6;
+                       }
+                        &:before{
+                            content: url("/img/icons/bullet-text.svg");
+                            height: 8px;
+                            width: 8px;
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-direction: row;
+                            float: left;
+                            position: absolute;
+                            left: -27px;
+                            transition: left 0.3s ease-in-out;
+                            -webkit-filter: invert(100%); /* Safari/Chrome */
+                            filter: invert(100%);
+                            @include tablet{
+                                content: '';
+                            }
+                            @include biggerPhone{
+                                content: '';
+                            }
+                        }
+                        &:hover{
+                            opacity:1;
+                             transition: opacity 0.3s ease-in-out;
+
+                            &::before{
+                                left: -22px;
+                                transition: left 0.3s ease-in-out;
+                            }
+                            &::after{
+                                right: -22px;
+                                transition: right 0.3s ease-in-out;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .innerBox{
+                padding-top: 1.5em;
+                 display: flex;
+                 justify-content: space-between;
+                  align-items: center;
+                  @include tablet{
+                      padding-top: 0;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      .footerNavigationWrapper{
+                          margin-bottom: 1em;
+                      }
+                  }
+                  @include biggerPhone{
+                    padding-top: 0;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .footerNavigationWrapper{
+                        margin-bottom: 4em;
+                        width: 100%;
+                    }
+                }
+            .footerNavigationWrapper{
+                h3{
+                    sub{
+                        display: none;
+                    }
+                    padding: 1em 1em 1em .7em;
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-family: $klavika-medium;
+                    @include letterSpacing(6px);
+                    @include fontSize(28px);
+                    text-align: left;
+                    @include tablet{
+                        @include fontSize(22px);
+                    }
+                    @include biggerPhone{
+                        display: flex;
+                        align-items: center;
+                        padding: 0;
+                        width: 100%;
+                        margin: 0px 0px 25px 0;
+                        text-transform: uppercase;
+                        font-family: $klavika-medium;
+                        @include letterSpacing(4px);
+                        @include fontSize(22px);
+                        sub{
+                            padding-left: 8px;
+                            display: flex;
+                            flex: 1;
+                            &::after{
+                                margin-left: 5px;
+                                content: '';
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                flex: 1;
+                            }
+                        }
+                    }
+                }
+                .navigationCategory{
+                    display: flex;
+                    @include biggerPhone{
+                        flex-direction: column;
+                    }
+                    a{
+                        color: #111;
+                        font-family: $klavika-light;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        padding: 1em;
+                        opacity: .7;
+                        letter-spacing: .2em;
+                        transition: opacity 0.3s ease-in-out;
+                        @include tablet{
+                            font-size: 12px;
+                        }
+                        &:hover{
+                            opacity: 1;
+                            transition: opacity 0.3s ease-in-out;
+                        }
+                    }
+                }
+               
+            }
+            .footerSocialWrapper{
+                @include biggerPhone{
+                    width: 100%;
+                }
+                h3{
+                    sub{
+                        display: none;
+                    }
+                    padding: 1em;
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-family: $klavika-medium;
+                    @include letterSpacing(6px);
+                    @include fontSize(28px);
+                    text-align: right;
+                    @include tablet{
+                        text-align: left;
+                        @include fontSize(22px);
+                    }
+                
+                    @include biggerPhone{
+                        text-align: left;
+                        display: flex;
+                        align-items: center;
+                        padding: 0;
+                        width: 100%;
+                        margin: 0px 0px 25px 0;
+                        text-transform: uppercase;
+                        font-family: $klavika-medium;
+                        @include letterSpacing(4px);
+                        @include fontSize(22px);
+                        sub{
+                            padding-left: 8px;
+                            display: flex;
+                            flex: 1;
+                            &::after{
+                                margin-left: 5px;
+                                content: '';
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                flex: 1;
+                            }
+                        }
+                    }
+                }
+                .socialWrapper{
+                    display: flex;
+                    align-items: flex-end;
+                    a{
+                        color: #111;
+                        font-family: $klavika-light;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        padding: 1em;
+                        opacity: .7;
+                        letter-spacing: .2em;
+                        transition: opacity 0.3s ease-in-out;
+                        @include biggerPhone{
+                            width: 100%;
+                        }
+                        @include tablet{
+                            font-size: 12px;
+                        }
+                        &:hover{
+                            opacity: 1;
+                            transition: opacity 0.3s ease-in-out;
+                        }
+                    }
+                    @include biggerPhone{
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                }
+                
+            }
+        }
+    }
+            .bottomFooter{
+                margin: 2em 2em 0 2em;
+                 border-top: 1px solid #333;
+                 position: relative;
+                 padding-top: 2em;
+                display: flex;
+                justify-content: space-between;
+                color: rgba($color: $font-color-primary, $alpha: .6);
+                @include biggerPhone{
+                margin: 2em 0em 0 0em;
+                }
+                &::before{
+                    content: '::';
+                    position: absolute;
+                    top: -9px;
+                    left: -15px;
+                    color: #111;
+                    font-size: 11px;
+                }
+                &::after{
+                    content: '::';
+                    position: absolute;
+                    top: -9px;
+                    right: -15px;
+                    color: #111;
+                    font-size: 11px;
+                }
+                .privacy{
+                    a{
+                        color: #111;
+
+                    }
+                }
+                .copyright{
+                        color: #111;
+                    
+                }
+            }
+        }
+    }
+}

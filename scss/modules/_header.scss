@@ -1,0 +1,346 @@
+// File Name: _header.scss
+// Description: global header styles
+// Used by: Page.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+@-moz-document url-prefix() {
+    .navigationContainer{
+
+        &.active{
+           
+            background-color: rgba(0, 0, 0, 0.8) !important;
+    
+            }
+    }
+  }
+
+/*----------header holder wrapper----------------*/
+
+    
+    .navigationContainer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 998;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
+        background-color: rgba(0, 0, 0, 0);
+        &.active{
+        transform: translateX(0%);
+        transition: all 0.3s ease;
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        background-color: rgba(0, 0, 0, 0.5);
+
+        }
+        .backdrop{
+            width: 100%;
+            height: 100%;
+  
+        .textWrapper{
+            display: flex;
+            height: 100%;
+            @include biggerPhone{
+                padding-top: 25px;
+            }
+            .textContainer{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                @include tablet{
+                    flex-direction: column;
+                   
+                }
+                @include biggerPhone{
+                    flex-direction: column;
+                   
+                }
+            .navigationText{
+                height: 100vh;
+                flex: 1;
+                @include fontSize(40px);
+                @include letterSpacing(2px);
+                text-transform: uppercase;
+                font-weight: 200;
+              @include tablet{ 
+                    height: 100%;
+                }
+                @include biggerPhone{
+                    height: 100%;
+                }
+              
+                    a{
+                        background-color: rgba(255, 255, 255, 0);
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover{
+                            background-color: rgba(255, 255, 255, 0.2);
+                           transition: all 0.3s ease-in-out;
+                           h1{
+                               color: $font-color-third;
+                                transition: color 0.3s ease-in-out;
+
+                           }
+                           p{
+                               opacity: 1;
+                               transition: opacity 0.3s ease-in-out;
+
+                           }
+                        }
+                        &.middletext{
+                            text-align: center;
+                            border-left: 1px solid rgba(255, 255, 255, 0.2);
+                            border-right: 1px solid rgba(255, 255, 255, 0.2);
+                            @include tablet{
+                            border-left: none;
+                            border-right: none;
+                            border-top: 1px solid rgba(255, 255, 255, 0.2);
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.2);    
+                            }
+                            @include biggerPhone{
+                                text-align: left;
+                                border-left: none;
+                                border-right: none;
+                                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                                border-bottom: 1px solid rgba(255, 255, 255, 0.2);    
+                                }
+                        }
+                        &.righttext{
+                            text-align: right;
+                            @include biggerPhone{
+                                text-align: left;
+                            }
+                        }
+                        padding:0 3em;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        @include tablet{
+                            align-items: center;
+                        }
+                        @include biggerPhone{
+                            padding:1em;
+                            align-items: flex-start;
+                        }
+                        .navNumber{
+                            margin-bottom: 1em;
+                            font-family: $klavika-medium;
+                            @include fontSize(46px);
+                            @include letterSpacing(2px);
+                            @include opacity(.3);
+                            @include tablet{
+                            @include fontSize(36px);
+
+                            }
+                            @include biggerPhone{
+                            @include fontSize(36px);
+
+                                }
+                            } 
+                      
+                        h1{
+                            font-family: $klavika-bold;
+                            @include fontSize(68px);
+                            @include letterSpacing(6px);
+                           transition: color 0.3s ease-in-out;
+                            @include tablet{
+                            @include fontSize(48px);
+
+                            }
+                            @include biggerPhone{
+                                @include fontSize(42px);
+    
+                                }
+                        }  
+                        p{
+                            margin-top: 5em;
+                            font-family: $klavika-light;
+                            @include fontSize(32px);
+                            @include opacity(.8);
+                            transition: opacity 0.3s ease-in-out;
+                            @include tablet{
+                            @include fontSize(22px);
+                            margin-top: 2em;
+                            }
+                            @include biggerPhone{
+                                @include fontSize(22px);
+                                margin-top: .5em;
+                             }
+                        }
+                     }
+                 }
+            }
+        }
+        .bottomSecondary{
+            padding: 1em 2em;
+            display: flex;
+            align-items: center;
+           
+            .scrollDirecion{
+                display: flex;
+                font-family: 'Mark-Bold';
+                @include letterSpacing(2px);
+                @include fontSize(12px);
+                flex: 1;
+                 
+                      }
+
+                    }
+                }
+            }
+
+header{
+.headerContainer{
+    padding: 2em;
+    font-family: 'Klavika Lt';
+    letter-spacing: 0.2em;
+    position: fixed;
+    left: 0;
+    right: 0;
+    transition: 0.3s ease;
+    z-index: 1000;
+@include biggerPhone{
+    padding: 1.5em 2em;
+}
+
+ &.fixedScroll{
+     position: fixed;
+     z-index: 1000;
+     background-color: rgba(0, 0, 0, 0.308);
+     transition: 0.3s ease;
+ }
+    .navigationWrapper{
+        display: flex;
+        align-items: center;
+      
+        .navigationLogo{
+            a{
+                display: flex;
+                outline: none;
+                img{
+                    height: 60px;
+                    @include tablet{
+                        height: 55px;
+                    }
+                    @include biggerPhone{
+                        height: 45px;
+                    }
+                }
+            }
+
+        }
+        .navigationCategory{
+            flex:1;
+            display: flex;
+            justify-content: flex-end;
+          
+            .navigationInner{
+              display: flex;
+
+                .navigationLinks{
+                    margin-right: 3em;
+                    display: none;
+                    a{
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        padding: 1.5em;
+                        letter-spacing: .2em;
+                    } 
+                }
+                .menuSandwich{
+                    display: flex;
+                    align-items: center;
+                    z-index: 999;
+                     margin-right: 20px;
+                     position: relative;
+                    cursor: pointer;
+                    @include biggerPhone{
+                     margin-right: 0px;
+
+                    }
+                     .menuText{
+                        font-size: 14px;
+                        margin-right: 3.5em;
+                        opacity: 1;
+                        transition: opacity 0.3s ease-in-out;
+                        @include biggerPhone{
+                            display: none;
+                        }
+                     }
+                     &:hover{
+                         .menuText{
+                             opacity: 0.6;
+                             transition: opacity 0.3s ease-in-out;
+                         }
+                         .sandwich{
+                            .sandwich-line{
+                                transition: all 0.3s ease-in-out;
+                                width: 35px;
+                                background-color: rgba($font-color-primary, 1);
+                                &.top{
+                                 transition: all 0.3s ease-in-out;
+                                width: 20px;
+                                background-color: rgba($font-color-primary, .5);
+           
+                                }
+                            }
+                         }
+
+                       }
+                    
+                .sandwich{
+                    position: absolute;
+                    right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    &.active{
+                        .sandwich-line{
+                            transition: all 0.3s ease-in-out;
+                            width: 35px;
+                            background-color: rgba($font-color-primary, 1);
+                            &.top{
+                             transition: all 0.3s ease-in-out;
+                            width: 20px;
+                            background-color: rgba($font-color-primary, .5);
+       
+                            }
+                        }
+                    }       
+                   .sandwich-line{     
+                         transition: all 0.3s ease-in-out;
+                        height: 2px;
+                        width: 20px;
+                        margin: 4px auto;
+                        background-color: rgba($font-color-primary, .5);
+                        
+                        &.top{
+                            transition: all 0.3s ease-in-out;
+                            background-color: rgba($font-color-primary, 1);
+                            margin: 4px auto;
+                            width: 35px;
+                              }
+                           }
+                    }
+                     
+                }
+            } 
+        }
+    }
+}    
+
+
+
+    }
+
+
+
+
+
+

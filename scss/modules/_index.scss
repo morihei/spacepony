@@ -1,0 +1,477 @@
+
+
+/*----------lightbox holder wrapper----------------*/
+@-moz-document url-prefix() {
+    .lightBoxBackgroundWrapper{
+
+        .buttonHolder{
+ 
+            top:55px !important;
+        }
+    }
+  }
+
+
+
+/*----------image holder wrapper----------------*/
+.mainContentSectionArea{
+
+    .mainContentContainer{
+
+        .headerIntro{
+            z-index: -1;
+            height: 100vh;
+            width: 100vw;
+            .imageHolder{
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                pointer-events: none;
+                max-width: 100%;
+                overflow: hidden;
+                background-size: cover;
+                background-position: top center;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                video{
+                    height: 100vh;
+                    object-fit: cover;
+                    width: 100%;
+                }
+                //background: no-repeat center url("/img/pony-astronaut.jpg"); 
+                //background-size: cover; 
+            }
+                    .headerWrapper{
+                        display: flex;
+                        height: 100%;
+                        .quoteMain{
+                            display: flex; 
+                            flex-direction: column; 
+                            flex: 1;
+                            justify-content: flex-end;  
+                            .quoteWrapper{
+                                padding: 5em 5em 7em 5em;
+                                @include tablet{
+                                    padding-bottom: 6em;
+                                }
+                                @include biggerPhone{
+                                 padding: 0 2em 6em 2em;   
+                                }
+                                h1{
+                                    margin: 0;
+                                    @include fontSize(44px);
+                                    @include letterSpacing(6px); 
+                                     font-family: $klavika-medium;
+                                    text-transform: uppercase;
+                                    @include tablet{
+                                    @include fontSize(38px);
+                                    @include letterSpacing(4px); 
+
+                                    }
+                                    @include biggerPhone{
+                                        @include fontSize(38px);
+                                        @include letterSpacing(4px); 
+                                    }
+                                } 
+                                p{
+                                    margin-top: 1em;
+                                    @include fontSize(30px);
+                                    @include letterSpacing(1px); 
+                                    @include biggerPhone{
+                                    @include fontSize(24px);
+                                        
+                                    }
+
+                                }
+                            
+                            }
+                            .bottomSecondary{
+                                //display: none !important;
+                                padding: 1em 2.5em;
+                                display: flex;
+                                height: 75px;
+                                align-items: center;
+                                justify-content: center;
+                                cursor: pointer;
+                              .scrollDirecion{
+                                @include fontSize(24px);
+                                text-transform: uppercase;
+                                display: flex;
+                                align-items: center;
+                                transform: rotate(-90deg);
+                                 position: relative;
+                                .scrollArrowLeft{
+                                   position: absolute;
+                                    display: flex;
+                                    width: 10px;
+                                    height: 35px;
+                                    background: no-repeat center url("/img/icons/arrow-left.svg");
+                                    opacity: .5;
+                                    background-size: cover; 
+                                    animation: downScroll 1.8s ease-in-out infinite;
+                                    @keyframes downScroll {
+                                        0% {
+                                            opacity:1;
+                                            margin-left: 0px;
+                                          }
+                                          50% {
+                                            opacity:.5;
+                                            margin-left: 8px;
+                                          }
+                                          100%{
+                                            opacity:1;
+                                            margin-left: 0px; 
+                                          }
+                                        }
+                                }
+                                .bullet{
+                                    background: no-repeat center url("/img/icons/bullet.svg");
+                                    width: 9px;
+                                    height: 9px; 
+                                    position: absolute;
+                                    animation: downScrollbullet 1.8s ease-in-out infinite;
+                                    @keyframes downScrollbullet {
+                                        0% {
+                                            opacity:.5;
+                                            margin-left: 30px;
+                                          }
+                                          50% {
+                                            opacity:1;
+                                            margin-left: 25px;
+                                          }
+                                          100%{
+                                            opacity:.5;
+                                            margin-left: 30px; 
+                                          }
+                                        }
+                                }  
+                             }      
+                        }
+                 }
+            }
+
+        }
+
+        /*----------what is holder wrapper----------------*/
+        .whatIs{
+            @include box-shadow(0px, 35px, 50px, 0px, rgba(115, 196, 234, 0.35));
+            .infoContainer{
+                max-width: $maxWidth;
+                margin: 0 auto;
+                padding: 12em 2em;
+                @include tablet{
+                    padding: 12em 4em;
+                }
+                @include biggerPhone{
+                    padding: 7em 2em;
+                }
+            .whatIsHolder{
+                display: flex;
+                justify-content: space-between;
+                .info-pony, .info, .socials{
+                    flex-basis: 47%;
+                    h1{
+                       @include header1;
+                    }
+                    p{
+                        @include paragraphStyle;
+                    }
+                    }
+                  
+                }
+                .socials{
+                    padding-top: 12em;
+                    @include biggerPhone{
+                        padding-top: 7em;
+                    }
+                    .socialContainer{
+                        display: flex;
+                        justify-content: space-between;
+                        @include biggerPhone{
+                            flex-wrap: wrap;
+                        }
+                        a{
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            &:before{
+                                content: url("/img/icons/bullet-text.svg");
+                                height: 8px;
+                                width: 8px;
+                                display: flex;
+                                justify-content: flex-start;
+                                flex-direction: row;
+                                float: left;
+                                align-items: center;
+                                margin-top: -1px;
+                                position: absolute;
+                                left: 0px;
+                                transition: left 0.3s ease-in-out;
+        
+                            }
+                            font-family: $klavika-light;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            padding: 1.5em;
+                            letter-spacing: .2em;
+                            opacity: 0.6;
+                            transition: opacity 0.3s ease-in-out;
+                            @include tablet{
+                            font-size: 14px;
+
+                            }
+                            @include biggerPhone{
+                                padding: 1.5em 2em;
+                                font-size: 14px;
+    
+                                }
+                                
+                            &:hover{
+                                opacity: 0.8;
+                                transition: opacity 0.3s ease-in-out;
+                                &:before{
+                                    left: 5px;
+                                transition: left 0.3s ease-in-out;
+        
+                                }
+                            }
+                        }
+                    }
+                    h1{
+                        @include header1;
+        
+                    }
+                    p{
+                        @include paragraphStyle;
+                        
+                    }
+                }
+            }
+        }
+        .spacewalk{
+            width: 100%;
+            background: repeat center #02081596 ;
+            background-image:url("/img/icons/grid-pattern-grid-only.svg"),url("/img/icons/grid-pattern-dots.svg"),url("/img/icons/grid-pattern-dot-middle.svg") ;
+            background-size: 75px 75px;
+            background-position:  0% 0%, 0% 0%, 0% 0%;
+            animation: animate-background linear 50s infinite;
+
+            .spacewalkContainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20em 5em;
+                @include biggerPhone{
+                    align-items: flex-start;
+                     padding: 20em 4em;
+
+                }
+                h1{
+                    @include fontSize(42px);
+                    @include letterSpacing(6px); 
+                     font-family: $klavika-medium;
+                    text-transform: uppercase;
+                    @include tablet{
+                        @include fontSize(34px);
+                        line-height: 1.5em;
+    
+                        }
+                        @include biggerPhone{
+                            @include fontSize(44px);
+                            line-height: 1.4em;
+                            text-align: left;
+                            }
+                }
+                p{
+                 @include paragraphQuote;
+                }
+            }
+        }
+        .featured{
+            overflow: hidden;
+            @include box-shadow(0px, 35px, 50px, 0px, rgba(115, 196, 234, 0.35));
+
+            @include biggerPhone{
+                padding: 0;
+            }
+            .headerName{
+                max-width: $maxWidth;
+                margin: 0 auto;
+                padding: 12em 0em;
+                @include tablet{
+                    padding: 12em 4em;
+                }
+                @include biggerPhone{
+                    padding: 7em 2em;
+                }
+                h1{
+                    text-transform: uppercase;
+                    @include header1;
+
+                }
+                p{
+                    @include paragraphStyle;
+
+                }
+            }
+            .featured-grid{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+                grid-auto-flow: dense;
+                grid-auto-rows: minmax(auto, auto);
+                @include tablet{
+                    grid-gap: 5px;
+
+                }
+                @include biggerPhone{
+                    grid-gap: 5px;
+                grid-template-columns: repeat(1, 1fr);
+
+                }
+                .project{
+                    position: relative;
+                    overflow: hidden;
+                    &.bigger-column{
+                        grid-column: 1/3;
+                        @include biggerPhone{
+                            grid-column: initial;
+                        }
+                    }
+                    a{
+                        .thumb-inner{
+                            background-color: black;
+                            &:hover{
+                                .thumb-hover{
+                                    @include opacity(1);
+                                   transition: opacity 0.3s ease-in-out;
+                                   .background-video{
+                                    @include opacity(1);
+
+                                   transition: opacity 0.5s ease-in-out;
+
+                                    }
+                                    .thumb-hover-info{
+                                        left: 4em;
+                                         transition: left 0.3s ease-in-out;
+
+                                    }
+                                }
+                            }
+                            .thumb-hover{
+                                @include opacity(0);
+                                transition: opacity 0.3s ease-in-out;
+
+                                .background-video{
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-repeat: no-repeat;
+                                    background-size: auto;
+                                     @include opacity(0);
+                                    z-index: 10;
+                                   transition: opacity 0.5s ease-in-out;
+
+                                     video{
+                                        object-fit: cover;
+                                        width: 100%;
+                                        height: 100%;
+                                     }
+                                }
+                                .thumb-hover-info{
+                                    position: absolute;
+                                    bottom: 30px;
+                                    left: 3em;
+                                    z-index: 11;
+                                     transition: left 0.3s ease-in-out;
+                                     text-shadow: (1px 2px 4px rgba(0, 0, 0, 0.2));
+                                    p{
+                                        margin: 0;
+                                        padding: 0;
+                                        .title{
+                                            @include fontSize(34px);
+                                            @include letterSpacing(6px); 
+                                            font-family: $klavika-medium;
+                                            text-transform: uppercase;
+                                        }
+                                        .category{
+                                            margin-top: 5px;
+                                            display: flex;
+                                            @include paragraphStyle;
+                                            span{
+                                                padding: 0 15px;
+                                                font-size: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            img{
+                                max-width: 100%;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                &:first-child, &:nth-child(4), &:nth-child(7){
+                                    grid-column: 1/3;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        .quoteLast{
+            width: 100%;
+            background: repeat center #02081596 ;
+            background-image:url("/img/icons/grid-pattern-grid-only.svg"),url("/img/icons/grid-pattern-dots.svg"),url("/img/icons/grid-pattern-dot-middle.svg") ;
+            background-size: 75px 75px;
+            background-position:  0% 0%, 0% 0%, 0% 0%;
+           animation: animate-background linear 50s infinite;
+            @keyframes animate-background {
+                from{ background-position: 0% 0%, 0% 0%, 0% 0%; }
+                to{ background-position: 0% 0%, 80% -120%, 80% -60%; }
+            }
+            .quotedHolder{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20em 5em;
+                @include biggerPhone{
+                    align-items: flex-start;
+                    padding: 20em 4em;
+
+                }
+                h1{
+                    text-align: center;
+                    line-height: 1.6em;
+                    @include fontSize(42px);
+                    @include letterSpacing(6px); 
+                     font-family: $klavika-medium;
+                    text-transform: uppercase;
+                    @include tablet{
+                    @include fontSize(34px);
+                    line-height: 1.5em;
+
+                    }
+                    @include biggerPhone{
+                        @include fontSize(44px);
+                        line-height: 1.4em;
+                        text-align: left;
+                        }
+                }
+                p{
+                 @include paragraphQuote;
+                }
+            }
+        }
+    }
+}
+ 
+

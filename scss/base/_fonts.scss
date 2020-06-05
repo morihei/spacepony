@@ -1,0 +1,254 @@
+
+//--------------- definition of font-face -------------------------//
+
+
+@font-face {
+    font-family: 'Mark-Extralight';
+    src: url('../../font/Mark-Extralight.eot');
+    src: local('Mark Extralight'), local('Mark-Extralight'),
+        url('../../font/Mark-Extralight.eot?#iefix') format('embedded-opentype'),
+        url('../../font/Mark-Extralight.woff') format('woff'),
+        url('../../font/Mark-Extralight.ttf') format('truetype'),
+   
+}
+@font-face {
+    font-family: 'Mark-Medium';
+    src: url('../../font/Mark-Medium.eot');
+    src: local('Mark Medium'), local('Mark-Medium'),
+        url('../../font/Mark-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../font/Mark-Medium.woff') format('woff'),
+        url('../../font/Mark-Medium.ttf') format('truetype'),
+ 
+}
+@font-face {
+    font-family: 'Mark-Bold';
+    src: url('../../font/Mark-Bold.eot');
+    src: local('Mark Bold'), local('Mark-Bold'),
+        url('../../font/Mark-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../font/Mark-Bold.woff') format('woff'),
+        url('../../font/Mark-Bold.ttf') format('truetype'),
+        url('../../font/Mark-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mark-Bold-Italic';
+    src: url('../../font/Mark-Bold-Italic.eot');
+    src: local('Mark Bold-Italic'), local('Mark-Bold-Italic'),
+        url('../../font/Mark-Bold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../../font/Mark-Bold-Italic.woff') format('woff'),
+        url('../../font/Mark-Bold-Italic.ttf') format('truetype'),
+        url('../../font/Mark-Bold-Italic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Mark-Light';
+    src: url('../../font/Mark-Light.eot');
+    src: local('Mark Light'), local('Mark-Light'),
+        url('../../font/Mark-Light.eot?#iefix') format('embedded-opentype'),
+        url('../../font/Mark-Light.woff') format('woff'),
+        url('../../font/Mark-Light.ttf') format('truetype'),
+        url('../../font/Mark-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+//--------------------klavika font--------------------------------//
+
+@font-face {
+    font-family: 'Klavika Lt';
+    src: url('../../font/Klavika-Light.eot');
+    src: url('../../font/Klavika-Light.eot?#iefix') format('embedded-opentype'),
+        url('../../font/Klavika-Light.woff2') format('woff2'),
+        url('../../font/Klavika-Light.woff') format('woff'),
+        url('../../font/Klavika-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Klavika Bd';
+    src: url('../../font/Klavika-Bold.eot');
+    src: url('../../font/Klavika-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../font/Klavika-Bold.woff2') format('woff2'),
+        url('../../font/Klavika-Bold.woff') format('woff'),
+        url('../../font/Klavika-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Klavika Md';
+    src: url('../../font/Klavika-Medium.eot');
+    src: url('../../font/Klavika-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../font/Klavika-Medium.woff2') format('woff2'),
+        url('../../font/Klavika-Medium.woff') format('woff'),
+        url('../../font/Klavika-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Klavika Md It';
+    src: url('../../font/Klavika-MediumItalic.eot');
+    src: url('../../font/Klavika-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../font/Klavika-MediumItalic.woff2') format('woff2'),
+        url('../../font/Klavika-MediumItalic.woff') format('woff'),
+        url('../../font/Klavika-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+//--------------- definition of font size mixins -------------------------//
+
+@function rem($size) {
+    @return $size / 16px * 1rem;
+    
+  }
+  @function letterSpacing($size) {
+    @return $size / 16px * 1rem;
+    
+  }
+  @mixin fontSize($size) {
+    font-size: rem($size);
+  }
+  @mixin letterSpacing($size) {
+    letter-spacing: letterSpacing($size);
+  }
+  @mixin header1{
+    margin-bottom: 3em;
+    color: $font-color-four;
+    font-family: $klavika-light;
+    @include letterSpacing(6px);
+    @include tablet{
+        margin-bottom: 1.5em;
+        @include fontSize(28px);
+
+    }
+    @include biggerPhone{
+      margin-bottom: 1.5em;
+      @include fontSize(28px);
+
+  }
+  }
+  @mixin paragraphStyle{
+      @include opacity(0.8);
+                 @include fontSize(24px);
+                 @include letterSpacing(2px);
+                line-height: 1.8em;
+                @include tablet{
+                 @include fontSize(20px);
+                 line-height: 1.7em;
+
+                }
+                @include biggerPhone{
+                  @include fontSize(18px);
+                  line-height: 1.8em;
+ 
+                 }
+}
+@mixin paragraphQuote{
+    font-family: $klavika-light;
+    margin-top: 1em;
+    padding-left: 1em;
+    position: relative;
+    @include fontSize(30px);
+    @include letterSpacing(3px); 
+    @include tablet{
+    @include fontSize(24px);
+
+    }
+    @include biggerPhone{
+      @include fontSize(24px);
+  
+      }
+      
+    &:before{
+        margin-top: -2px;
+        content: url("/img/icons/bullet-quote.svg");
+        height: 8px;
+        width: 8px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        float: left;
+        position: absolute;
+        left: 0px;
+
+        
+    }
+}
+@mixin buttonFlicker{
+    animation: flicker .3s ease-in-out;
+    @keyframes flicker {
+        0% {
+            opacity:0.1;
+          }
+          2% {
+            opacity:1;
+        
+          }
+          4% {
+            opacity:0.1;
+         
+          }
+          
+          50% {
+            opacity:1;
+            
+          }
+          70% {
+            opacity:0.5;
+         
+          }
+          75%{
+            opacity:1;   
+          }
+          80%{
+            opacity:0.1;  
+          }
+          100% {
+            opacity:1;
+            
+          }
+    }
+}
+
+@mixin tabFlicker{
+    animation: flicker .2s ease-in-out;
+    @keyframes flicker {
+        0% {
+            opacity:0.1;
+          }
+          2% {
+            opacity:1;
+        
+          }
+          4% {
+            opacity:0.1;
+         
+          }
+          
+          50% {
+            opacity:1;
+            
+          }
+          70% {
+            opacity:0.5;
+         
+          }
+          75%{
+            opacity:1;   
+          }
+          80%{
+            opacity:0.1;  
+          }
+          100% {
+            opacity:1;
+            
+          }
+    }
+}
+                                           
+

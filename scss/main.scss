@@ -1,0 +1,162 @@
+
+@import "base/_mixins";
+
+// ----------------------------------------------------------------------
+  // Base
+// ----------------------------------------------------------------------
+@import "base/mixins";
+@import "base/variables";
+@import "base/extends";
+@import "base/reset";
+@import "base/fonts";
+
+// ----------------------------------------------------------------------
+  // Layout
+// ----------------------------------------------------------------------
+@import "layout/grid";
+
+// ----------------------------------------------------------------------
+  // Modules
+// ----------------------------------------------------------------------
+@import "modules/fluidbox";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/index";
+@import "modules/about";
+@import "modules/contact";
+@import "modules/projects";
+@import "modules/project-details";
+// ----------------------------------------------------------------------
+	// Views
+// ----------------------------------------------------------------------
+@import "views/blue";
+
+
+
+html {
+    body {
+      margin: 0;
+      //@include margin-auto();
+      //max-width: $maxWidth;
+      padding: 0;
+      font-family: $mark-light;
+      background-color: $font-color-back;
+      color: $font-color-primary;
+      a{
+        color: $font-color-primary;
+        text-decoration: none;
+        &:active{
+            text-decoration: none;
+        }
+      }
+        p {
+            font-size: 22px;
+            color: rgba($color: $font-color-primary, $alpha: 0.8);
+        }
+        sub{
+          bottom: -0.02em;
+        }
+        sup{
+          top: -0.45em;
+        }
+        &.fixedPosition{
+          overflow: hidden;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+          border:none;
+          -webkit-text-fill-color: $font-color-primary;
+         box-shadow: 0 0 0px 1000px #00000b inset;
+         -webkit-box-shadow: 0 0 0px 1000px #00000b inset;
+          transition: background-color 1s ease-in-out 0s;
+        }
+        input::placeholder {
+          @include paragraphStyle;
+        }
+        .loader{
+          width: 50px;
+        }
+        img.lazy, video.lazy {
+          background-image: url('/img/icons/loader-horse.gif');
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 50px;
+      }
+
+
+      .formBlock a{
+                                                       
+        position: relative;
+        min-width: 360px;
+        height: 75px;
+        margin: 0;
+        padding-top: 4px;
+        font-family: $klavika-light;
+        @include fontSize(24px);
+        @include letterSpacing(4px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        outline: none;
+        color: $font-color-primary;
+        border: 2px solid rgba($font-color-primary, $alpha: 1);
+        span{
+            position: relative;
+            z-index: 3;
+        }
+    }
+    .formBlock a:before{
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: calc(100% + -2px);
+      height: calc(100% - 2px);
+      background: #00000b;
+
+  } 
+  .formBlock a:after{
+           content: '';
+            position: absolute;
+            left: 1px;
+            top: 1px;
+            height: calc(100% + -2px);
+            width: calc(100% - 2px);
+            background: #00000b;
+
+        }
+        
+        //style for projects tab navigation
+        
+          .cd-tabs__panel {
+            display: none;
+          }
+        
+          .cd-tabs__panel--selected {
+            display: flex;
+            flex-direction: column;
+            animation: cd-fade-in 0.5s;
+          }
+        
+        
+        @keyframes cd-fade-in {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        #map{
+          height: 100%;
+        }
+    }
+}
