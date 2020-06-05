@@ -158,5 +158,13 @@ html {
         #map{
           height: 100%;
         }
+        .isDisabled{ 
+          
+          color: currentColor;
+          cursor: not-allowed;
+          opacity: 0.3 !important; 
+          text-decoration: line-through;
+          pointer-events: none;
+        }
     }
 }
