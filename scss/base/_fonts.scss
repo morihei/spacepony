@@ -250,5 +250,17 @@
           }
     }
 }
-                                           
+@mixin background-grid{
+  animation: animate-back linear 50s infinite;
+
+  @keyframes animate-back {
+    from{ 
+      background-position: 0% 0%, 0% 0%, 0% 0%;
+     }
+    to{ 
+      background-position: 0% 0%, 0% -120%, 0% -70%; 
+    }
+  }                                          
+
+}
 

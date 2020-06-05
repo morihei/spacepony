@@ -254,18 +254,18 @@
             background: repeat center #02081596 ;
             background-image:url("/img/icons/grid-pattern-grid-only.svg"),url("/img/icons/grid-pattern-dots.svg"),url("/img/icons/grid-pattern-dot-middle.svg") ;
             background-size: 75px 75px;
-            background-position:  0% 0%, 0% 0%, 0% 0%;
-            animation: animate-background linear 50s infinite;
-
+            background-position:  0% 0%;
+            @include background-grid;
             .spacewalkContainer{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding: 20em 5em;
+                text-align: center;
                 @include biggerPhone{
                     align-items: flex-start;
                      padding: 20em 4em;
-
+                    text-align: left;
                 }
                 h1{
                     @include fontSize(42px);
@@ -433,11 +433,8 @@
             background-image:url("/img/icons/grid-pattern-grid-only.svg"),url("/img/icons/grid-pattern-dots.svg"),url("/img/icons/grid-pattern-dot-middle.svg") ;
             background-size: 75px 75px;
             background-position:  0% 0%, 0% 0%, 0% 0%;
-           animation: animate-background linear 50s infinite;
-            @keyframes animate-background {
-                from{ background-position: 0% 0%, 0% 0%, 0% 0%; }
-                to{ background-position: 0% 0%, 80% -120%, 80% -60%; }
-            }
+            @include background-grid;
+            
             .quotedHolder{
                 display: flex;
                 flex-direction: column;
