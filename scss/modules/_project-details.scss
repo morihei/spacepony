@@ -133,6 +133,12 @@
                 height: 100%;
                 max-width: 100%;
                 object-fit: cover;
+                &.hex-video{
+                    min-height: 40vh;
+                    @include biggerPhone{
+                        min-height: 25vh;
+                    }
+                }
             }
         }
         .description-two{

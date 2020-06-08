@@ -368,6 +368,7 @@ button {
   right: 0;
   bottom: 0;
   z-index: 998;
+  display: none;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: all 0.3s ease;
@@ -378,13 +379,24 @@ button {
 }
 
 .navigationContainer.active {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navigationContainer.is-visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigationContainer.is-open {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .navigationContainer .backdrop {
@@ -3418,11 +3430,17 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 50vh;
+}
+
+@media (max-width: 766px) {
+  .lunar .imageHolder {
+    min-height: 40vh;
+  }
 }
 
 .lunar .imageHolder video {
   width: 100%;
-  max-height: 50vh;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -4473,6 +4491,16 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.mainContentSectionArea .mainContentContainer .project-background video.hex-video {
+  min-height: 40vh;
+}
+
+@media (max-width: 766px) {
+  .mainContentSectionArea .mainContentContainer .project-background video.hex-video {
+    min-height: 25vh;
+  }
 }
 
 .mainContentSectionArea .mainContentContainer .description-two {

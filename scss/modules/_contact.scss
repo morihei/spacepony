@@ -310,9 +310,13 @@
     
     .imageHolder{
         display: flex;
+        min-height: 50vh;
+        @include biggerPhone{
+        min-height: 40vh;
+
+        }
         video{
             width: 100%;
-            max-height: 50vh;
             max-width: 100%;
             object-fit: cover;
             @include biggerPhone{

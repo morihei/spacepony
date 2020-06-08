@@ -25,19 +25,29 @@
         right: 0;
         bottom: 0;
         z-index: 998;
+        display: none;
         transform: translateX(100%);
         transition: all 0.3s ease;
         -webkit-backdrop-filter: blur(0px);
         backdrop-filter: blur(0px);
         background-color: rgba(0, 0, 0, 0);
         &.active{
-        transform: translateX(0%);
         transition: all 0.3s ease;
         -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px);
         background-color: rgba(0, 0, 0, 0.5);
 
         }
+        &.is-visible{
+            display: flex;
+
+        }
+        &.is-open{
+            transform: translateX(0%);
+            transition: all 0.3s ease;
+
+        }
+      
         .backdrop{
             width: 100%;
             height: 100%;
