@@ -3,6 +3,8 @@
 
 $(document).ready(function(){ 
 
+  
+
    $(".bottomSecondary").on('click', function(event) {
 
         event.preventDefault();
