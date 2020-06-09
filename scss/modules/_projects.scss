@@ -58,7 +58,7 @@
                 margin: 0 auto;
                 padding: 16em 3em 0em 3em;
                 @include biggerPhone{
-                    padding: 7em 2em 0em 2em;
+                    padding: 12em 2em 0em 2em;
                 }
                 p{
                     @include paragraphStyle;
