@@ -115,6 +115,8 @@ footer{
                         letter-spacing: 0.05em;
                         font-size: 16px;
                         opacity: .7;
+                        display: flex;
+                        align-items: center;
                         position: relative;
                         transition: opacity 0.3s ease-in-out;
                        @include biggerPhone{
@@ -128,7 +130,6 @@ footer{
                        }
                         &:before{
                             content: url("/img/icons/bullet-text.svg");
-                            height: 8px;
                             width: 8px;
                             display: flex;
                             justify-content: flex-start;
