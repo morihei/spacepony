@@ -686,7 +686,7 @@ header .headerContainer .navigationWrapper .navigationLogo a {
 }
 
 header .headerContainer .navigationWrapper .navigationLogo a img {
-  height: 60px;
+  height: 55px;
 }
 
 @media (min-width: 768px) and (max-width: 1111px) {
@@ -777,11 +777,23 @@ header .headerContainer .navigationWrapper .navigationCategory .navigationInner 
   background-color: #f6f6f6;
 }
 
+@media (max-width: 766px) {
+  header .headerContainer .navigationWrapper .navigationCategory .navigationInner .menuSandwich:hover .sandwich .sandwich-line {
+    width: 28px;
+  }
+}
+
 header .headerContainer .navigationWrapper .navigationCategory .navigationInner .menuSandwich:hover .sandwich .sandwich-line.top {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   width: 20px;
   background-color: rgba(246, 246, 246, 0.5);
+}
+
+@media (max-width: 766px) {
+  header .headerContainer .navigationWrapper .navigationCategory .navigationInner .menuSandwich:hover .sandwich .sandwich-line.top {
+    width: 15px;
+  }
 }
 
 header .headerContainer .navigationWrapper .navigationCategory .navigationInner .menuSandwich .sandwich {
@@ -803,11 +815,23 @@ header .headerContainer .navigationWrapper .navigationCategory .navigationInner 
   background-color: #f6f6f6;
 }
 
+@media (max-width: 766px) {
+  header .headerContainer .navigationWrapper .navigationCategory .navigationInner .menuSandwich .sandwich.active .sandwich-line {
+    width: 28px;
+  }
+}
+
 header .headerContainer .navigationWrapper .navigationCategory .navigationInner .menuSandwich .sandwich.active .sandwich-line.top {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   width: 20px;
   background-color: rgba(246, 246, 246, 0.5);
+}
+
+@media (max-width: 766px) {
+  header .headerContainer .navigationWrapper .navigationCategory .navigationInner .menuSandwich .sandwich.active .sandwich-line.top {
+    width: 15px;
+  }
 }
 
 header .headerContainer .navigationWrapper .navigationCategory .navigationInner .menuSandwich .sandwich .sandwich-line {
@@ -819,12 +843,24 @@ header .headerContainer .navigationWrapper .navigationCategory .navigationInner 
   background-color: rgba(246, 246, 246, 0.5);
 }
 
+@media (max-width: 766px) {
+  header .headerContainer .navigationWrapper .navigationCategory .navigationInner .menuSandwich .sandwich .sandwich-line {
+    width: 15px;
+  }
+}
+
 header .headerContainer .navigationWrapper .navigationCategory .navigationInner .menuSandwich .sandwich .sandwich-line.top {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #f6f6f6;
   margin: 4px auto;
   width: 35px;
+}
+
+@media (max-width: 766px) {
+  header .headerContainer .navigationWrapper .navigationCategory .navigationInner .menuSandwich .sandwich .sandwich-line.top {
+    width: 28px;
+  }
 }
 
 footer {

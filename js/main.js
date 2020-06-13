@@ -97,12 +97,23 @@ $(document).ready(function(){
         }
       if($('.sandwich').hasClass('active'))
       {
+        //drugi mora imat top
+        if($(window).width() < 767){
+          $('.sandwich').children(".sandwich-line").first().addClass("top");
+          $('.sandwich').children('.sandwich-line').eq(1).removeClass("top");
+
+        }
          $('body').addClass("fixedPosition");
          $(".headerContainer").css({"background":"rgba(0, 0, 0, 0)"," -webkit-backdrop-filter": "blur(0px)",
          "backdrop-filter": "blur(0px)"});
       }
       else
       {
+        if($(window).width() < 767){
+          $('.sandwich').children(".sandwich-line").first().removeClass("top");
+          $('.sandwich').children('.sandwich-line').eq(1).addClass("top");
+        }
+        //prvi mora imat top
          $('body').removeClass("fixedPosition");
          if($(window).scrollTop() <= $('.headerContainer').outerHeight()){
          $(".headerContainer").css("background","rgba(0, 0, 0, 0)");
