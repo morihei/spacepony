@@ -19,23 +19,148 @@
     .mainContentContainer{
 
         .aboutIntro{
-            width: 100%;
+           /* width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow: hidden;*/
+            z-index: -1;
+            height: 100vh;
+            width: 100%;
             .imageHolder{
+               /*  height: 100vh;
+                display: flex;*/
+                width: 100%;
                 height: 100vh;
-                display: flex;
+                position: absolute;
+                pointer-events: none;
+                max-width: 100%;
+                overflow: hidden;
+                background-size: cover;
+                background-position: top center;
+                top: 0;
+                left: 0;
+                z-index: -1;
                 @include biggerPhone{
-                    max-height: 45vh;
+                   
                 }
                 video{
+                    height: 100vh;
+                    object-fit: cover;
                     width: 100%;
+                    /*  width: 100%;
                     height: 100%;
                     max-width: 100%;
-                    object-fit: cover;
+                    object-fit: cover;*/
                 }
 
             }
+                .headerWrapper{
+                    display: flex;
+                    height: 100%;
+                    .quoteMain{
+                        display: flex; 
+                        flex-direction: column; 
+                        flex: 1;
+                        justify-content: flex-end;  
+                        .quoteWrapper{
+                            padding: 5em 5em 7em 5em;
+                            @include tablet{
+                                padding-bottom: 6em;
+                            }
+                            @include biggerPhone{
+                            padding: 0 2em 6em 2em;   
+                            }
+                            h1{
+                                margin: 0;
+                                @include fontSize(44px);
+                                @include letterSpacing(6px); 
+                                font-family: $klavika-medium;
+                                text-transform: uppercase;
+                                @include tablet{
+                                @include fontSize(38px);
+                                @include letterSpacing(4px); 
+
+                                }
+                                @include biggerPhone{
+                                    @include fontSize(38px);
+                                    @include letterSpacing(4px); 
+                                }
+                            } 
+                            p{
+                                margin-top: 1em;
+                                @include fontSize(30px);
+                                @include letterSpacing(1px); 
+                                @include biggerPhone{
+                                @include fontSize(24px);
+                                    
+                                }
+
+                            }
+                        
+                        }
+                        .bottomSecondary{
+                            //display: none !important;
+                            padding: 1em 2.5em;
+                            display: flex;
+                            height: 75px;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                        .scrollDirecion{
+                            @include fontSize(24px);
+                            text-transform: uppercase;
+                            display: flex;
+                            align-items: center;
+                            transform: rotate(-90deg);
+                            position: relative;
+                            .scrollArrowLeft{
+                            position: absolute;
+                                display: flex;
+                                width: 10px;
+                                height: 35px;
+                                background: no-repeat center url("/img/icons/arrow-left.svg");
+                                opacity: .5;
+                                background-size: cover; 
+                                animation: downScroll 1.8s ease-in-out infinite;
+                                @keyframes downScroll {
+                                    0% {
+                                        opacity:1;
+                                        margin-left: 0px;
+                                    }
+                                    50% {
+                                        opacity:.5;
+                                        margin-left: 8px;
+                                    }
+                                    100%{
+                                        opacity:1;
+                                        margin-left: 0px; 
+                                    }
+                                    }
+                            }
+                            .bullet{
+                                background: no-repeat center url("/img/icons/bullet.svg");
+                                width: 9px;
+                                height: 9px; 
+                                position: absolute;
+                                animation: downScrollbullet 1.8s ease-in-out infinite;
+                                @keyframes downScrollbullet {
+                                    0% {
+                                        opacity:.5;
+                                        margin-left: 30px;
+                                    }
+                                    50% {
+                                        opacity:1;
+                                        margin-left: 25px;
+                                    }
+                                    100%{
+                                        opacity:.5;
+                                        margin-left: 30px; 
+                                    }
+                                    }
+                            }  
+                        }      
+                    }
+            }
+        }
         }
 
         /*----------what is holder wrapper----------------*/

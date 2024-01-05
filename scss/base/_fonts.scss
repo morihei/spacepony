@@ -103,11 +103,11 @@
 //--------------- definition of font size mixins -------------------------//
 
 @function rem($size) {
-    @return $size / 16px * 1rem;
+    @return calc($size / 16px) * 1rem;
     
   }
   @function letterSpacing($size) {
-    @return $size / 16px * 1rem;
+    @return calc($size / 16px)* 1rem;
     
   }
   @mixin fontSize($size) {

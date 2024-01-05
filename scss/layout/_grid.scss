@@ -21,7 +21,7 @@
 
   .col_#{$i} {
     @extend %col;
-    width: ($i / $grid-columns) * 100%;
+    width: calc($i / $grid-columns) * 100%;
   }
 
 }

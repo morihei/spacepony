@@ -9,7 +9,7 @@ $(document).ready(function(){
         event.preventDefault();
          $(this).fadeOut(500);
         $('html, body').animate({
-          scrollTop: $(".whatIs").offset().top
+          scrollTop: $(".whatIs, .whoIs").offset().top
         }, 800);
     });
     $(".cd-tabs__list li a").on('click', function(event) {
