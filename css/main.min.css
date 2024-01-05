@@ -1050,12 +1050,6 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   color: #111;
 }
 
-/*----------lightbox holder wrapper----------------*/
-@-moz-document url-prefix() {
-  .lightBoxBackgroundWrapper .buttonHolder {
-    top: 55px !important;
-  }
-}
 /*----------image holder wrapper----------------*/
 .mainContentSectionArea .mainContentContainer {
   /*----------what is holder wrapper----------------*/
@@ -1705,12 +1699,6 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   left: 0px;
 }
 
-/*----------lightbox holder wrapper----------------*/
-@-moz-document url-prefix() {
-  .lightBoxBackgroundWrapper .buttonHolder {
-    top: 55px !important;
-  }
-}
 /*----------image holder wrapper----------------*/
 .mainContentSectionArea .mainContentContainer {
   /*----------what is holder wrapper----------------*/

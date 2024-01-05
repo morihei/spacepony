@@ -1,15 +1,6 @@
 
 
-/*----------lightbox holder wrapper----------------*/
-@-moz-document url-prefix() {
-    .lightBoxBackgroundWrapper{
 
-        .buttonHolder{
- 
-            top:55px !important;
-        }
-    }
-  }
 
 
 
@@ -39,8 +30,7 @@
                     object-fit: cover;
                     width: 100%;
                 }
-                //background: no-repeat center url("/img/pony-astronaut.jpg"); 
-                //background-size: cover; 
+
             }
                     .headerWrapper{
                         display: flex;
