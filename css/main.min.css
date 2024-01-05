@@ -1716,16 +1716,11 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   /*----------what is holder wrapper----------------*/
 }
 .mainContentSectionArea .mainContentContainer .aboutIntro {
-  /* width: 100%;
-   height: 100%;
-   overflow: hidden;*/
   z-index: -1;
   height: 100vh;
   width: 100%;
 }
 .mainContentSectionArea .mainContentContainer .aboutIntro .imageHolder {
-  /*  height: 100vh;
-   display: flex;*/
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -1743,10 +1738,6 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  /*  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  object-fit: cover;*/
 }
 .mainContentSectionArea .mainContentContainer .aboutIntro .headerWrapper {
   display: flex;

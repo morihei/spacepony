@@ -19,15 +19,10 @@
     .mainContentContainer{
 
         .aboutIntro{
-           /* width: 100%;
-            height: 100%;
-            overflow: hidden;*/
             z-index: -1;
             height: 100vh;
             width: 100%;
             .imageHolder{
-               /*  height: 100vh;
-                display: flex;*/
                 width: 100%;
                 height: 100vh;
                 position: absolute;
@@ -46,10 +41,7 @@
                     height: 100vh;
                     object-fit: cover;
                     width: 100%;
-                    /*  width: 100%;
-                    height: 100%;
-                    max-width: 100%;
-                    object-fit: cover;*/
+
                 }
 
             }
@@ -160,8 +152,8 @@
                         }      
                     }
             }
-        }
-        }
+         }
+     }
 
         /*----------what is holder wrapper----------------*/
         .whoIs{
