@@ -3406,6 +3406,9 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
 .mainContentSectionArea .mainContentContainer .projectDescription .infoContainer .description .synopsisContainer {
   display: flex;
 }
+.mainContentSectionArea .mainContentContainer .projectDescription .infoContainer .description .synopsisContainer.award {
+  flex-direction: column;
+}
 .mainContentSectionArea .mainContentContainer .projectDescription .infoContainer .description .synopsisContainer p {
   opacity: 0.8;
   filter: alpha(opacity=80);
@@ -3424,6 +3427,15 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
     font-size: 1.125rem;
     line-height: 1.8em;
   }
+}
+.mainContentSectionArea .mainContentContainer .projectDescription .infoContainer .description .synopsisContainer .if_award {
+  margin-top: 30px;
+}
+.mainContentSectionArea .mainContentContainer .projectDescription .infoContainer .description .synopsisContainer .if_award p {
+  margin-top: 30px;
+}
+.mainContentSectionArea .mainContentContainer .projectDescription .infoContainer .description .synopsisContainer .if_award p a {
+  color: #ffa247;
 }
 .mainContentSectionArea .mainContentContainer .project-background {
   width: 100%;

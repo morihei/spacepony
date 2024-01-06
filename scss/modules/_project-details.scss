@@ -115,9 +115,21 @@
                             }
                             .synopsisContainer{
                                 display: flex;
+                                &.award{ 
+                                    flex-direction: column;
+                                }
                                 p{
                                     @include paragraphStyle;
                                     
+                                }
+                                .if_award{
+                                    margin-top: 30px;
+                                    p{
+                                        margin-top: 30px;
+                                        a{
+                                            color: $font-color-four;
+                                        }
+                                    }
                                 }
 
                             }
