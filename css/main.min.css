@@ -1523,6 +1523,9 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
     grid-column: initial;
   }
 }
+.mainContentSectionArea .mainContentContainer .featured .featured-grid .project a.disabled-link:active {
+  pointer-events: none;
+}
 .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner {
   background-color: black;
 }
@@ -1546,6 +1549,7 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   transition: opacity 0.3s ease-in-out;
 }
 .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner .thumb-hover .background-video {
+  border: 2px solid white;
   position: absolute;
   top: 0;
   left: 0;

@@ -330,6 +330,9 @@
                         }
                     }
                     a{
+                        &.disabled-link:active{
+                            pointer-events: none;
+                        }
                         .thumb-inner{
                             background-color: black;
                             &:hover{
@@ -354,6 +357,7 @@
                                 transition: opacity 0.3s ease-in-out;
 
                                 .background-video{
+                                    border: 2px solid white;
                                     position: absolute;
                                     top: 0;
                                     left: 0;
