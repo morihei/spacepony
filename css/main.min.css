@@ -3461,26 +3461,26 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
     min-height: 25vh;
   }
 }
-.mainContentSectionArea .mainContentContainer .description-two {
+.mainContentSectionArea .mainContentContainer .description-two, .mainContentSectionArea .mainContentContainer .description-one, .mainContentSectionArea .mainContentContainer .description-three {
   width: 100%;
   height: 100%;
 }
-.mainContentSectionArea .mainContentContainer .description-two .descContainer {
+.mainContentSectionArea .mainContentContainer .description-two .descContainer, .mainContentSectionArea .mainContentContainer .description-one .descContainer, .mainContentSectionArea .mainContentContainer .description-three .descContainer {
   max-width: 1280px;
   margin: 0 auto;
   padding: 20em 2em;
 }
 @media (min-width: 768px) and (max-width: 1111px) {
-  .mainContentSectionArea .mainContentContainer .description-two .descContainer {
+  .mainContentSectionArea .mainContentContainer .description-two .descContainer, .mainContentSectionArea .mainContentContainer .description-one .descContainer, .mainContentSectionArea .mainContentContainer .description-three .descContainer {
     padding: 12em 3em;
   }
 }
 @media (max-width: 766px) {
-  .mainContentSectionArea .mainContentContainer .description-two .descContainer {
+  .mainContentSectionArea .mainContentContainer .description-two .descContainer, .mainContentSectionArea .mainContentContainer .description-one .descContainer, .mainContentSectionArea .mainContentContainer .description-three .descContainer {
     padding: 7em 2em;
   }
 }
-.mainContentSectionArea .mainContentContainer .description-two .descContainer h3 {
+.mainContentSectionArea .mainContentContainer .description-two .descContainer h3, .mainContentSectionArea .mainContentContainer .description-one .descContainer h3, .mainContentSectionArea .mainContentContainer .description-three .descContainer h3 {
   margin-bottom: 10px;
   font-family: "Klavika Md", Helvetica, sans-serif;
   font-size: 3.125rem;
@@ -3489,20 +3489,20 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   filter: alpha(opacity=30);
 }
 @media (min-width: 768px) and (max-width: 1111px) {
-  .mainContentSectionArea .mainContentContainer .description-two .descContainer h3 {
+  .mainContentSectionArea .mainContentContainer .description-two .descContainer h3, .mainContentSectionArea .mainContentContainer .description-one .descContainer h3, .mainContentSectionArea .mainContentContainer .description-three .descContainer h3 {
     font-size: 2.125rem;
   }
 }
-.mainContentSectionArea .mainContentContainer .description-two .descContainer h3 sup {
+.mainContentSectionArea .mainContentContainer .description-two .descContainer h3 sup, .mainContentSectionArea .mainContentContainer .description-one .descContainer h3 sup, .mainContentSectionArea .mainContentContainer .description-three .descContainer h3 sup {
   font-family: "Klavika Lt", Helvetica, sans-serif;
   font-size: 2.375rem;
 }
 @media (min-width: 768px) and (max-width: 1111px) {
-  .mainContentSectionArea .mainContentContainer .description-two .descContainer h3 sup {
+  .mainContentSectionArea .mainContentContainer .description-two .descContainer h3 sup, .mainContentSectionArea .mainContentContainer .description-one .descContainer h3 sup, .mainContentSectionArea .mainContentContainer .description-three .descContainer h3 sup {
     font-size: 1.5rem;
   }
 }
-.mainContentSectionArea .mainContentContainer .description-two .descContainer h1 {
+.mainContentSectionArea .mainContentContainer .description-two .descContainer h1, .mainContentSectionArea .mainContentContainer .description-one .descContainer h1, .mainContentSectionArea .mainContentContainer .description-three .descContainer h1 {
   margin-bottom: 2em;
   font-size: 2.5rem;
   letter-spacing: 0.375rem;
@@ -3510,20 +3510,20 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   text-transform: uppercase;
 }
 @media (min-width: 768px) and (max-width: 1111px) {
-  .mainContentSectionArea .mainContentContainer .description-two .descContainer h1 {
+  .mainContentSectionArea .mainContentContainer .description-two .descContainer h1, .mainContentSectionArea .mainContentContainer .description-one .descContainer h1, .mainContentSectionArea .mainContentContainer .description-three .descContainer h1 {
     font-size: 2rem;
   }
 }
 @media (max-width: 766px) {
-  .mainContentSectionArea .mainContentContainer .description-two .descContainer h1 {
+  .mainContentSectionArea .mainContentContainer .description-two .descContainer h1, .mainContentSectionArea .mainContentContainer .description-one .descContainer h1, .mainContentSectionArea .mainContentContainer .description-three .descContainer h1 {
     margin-bottom: 1.5em;
     font-size: 2.25rem;
   }
 }
-.mainContentSectionArea .mainContentContainer .description-two .descContainer .description-process {
+.mainContentSectionArea .mainContentContainer .description-two .descContainer .description-process, .mainContentSectionArea .mainContentContainer .description-one .descContainer .description-process, .mainContentSectionArea .mainContentContainer .description-three .descContainer .description-process {
   display: flex;
 }
-.mainContentSectionArea .mainContentContainer .description-two .descContainer .description-process p {
+.mainContentSectionArea .mainContentContainer .description-two .descContainer .description-process p, .mainContentSectionArea .mainContentContainer .description-one .descContainer .description-process p, .mainContentSectionArea .mainContentContainer .description-three .descContainer .description-process p {
   opacity: 0.8;
   filter: alpha(opacity=80);
   font-size: 1.5rem;
@@ -3531,13 +3531,13 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   line-height: 1.8em;
 }
 @media (min-width: 768px) and (max-width: 1111px) {
-  .mainContentSectionArea .mainContentContainer .description-two .descContainer .description-process p {
+  .mainContentSectionArea .mainContentContainer .description-two .descContainer .description-process p, .mainContentSectionArea .mainContentContainer .description-one .descContainer .description-process p, .mainContentSectionArea .mainContentContainer .description-three .descContainer .description-process p {
     font-size: 1.25rem;
     line-height: 1.7em;
   }
 }
 @media (max-width: 766px) {
-  .mainContentSectionArea .mainContentContainer .description-two .descContainer .description-process p {
+  .mainContentSectionArea .mainContentContainer .description-two .descContainer .description-process p, .mainContentSectionArea .mainContentContainer .description-one .descContainer .description-process p, .mainContentSectionArea .mainContentContainer .description-three .descContainer .description-process p {
     font-size: 1.125rem;
     line-height: 1.8em;
   }
