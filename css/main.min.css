@@ -1474,7 +1474,13 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
     font-size: 1.75rem;
   }
 }
-.mainContentSectionArea .mainContentContainer .featured .headerName p {
+.mainContentSectionArea .mainContentContainer .featured .headerName .journeys {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.mainContentSectionArea .mainContentContainer .featured .headerName .journeys p {
   opacity: 0.8;
   filter: alpha(opacity=80);
   font-size: 1.5rem;
@@ -1482,16 +1488,118 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   line-height: 1.8em;
 }
 @media (min-width: 768px) and (max-width: 1111px) {
-  .mainContentSectionArea .mainContentContainer .featured .headerName p {
+  .mainContentSectionArea .mainContentContainer .featured .headerName .journeys p {
     font-size: 1.25rem;
     line-height: 1.7em;
   }
 }
 @media (max-width: 766px) {
-  .mainContentSectionArea .mainContentContainer .featured .headerName p {
+  .mainContentSectionArea .mainContentContainer .featured .headerName .journeys p {
     font-size: 1.125rem;
     line-height: 1.8em;
   }
+}
+@media (max-width: 766px) {
+  .mainContentSectionArea .mainContentContainer .featured .headerName .journeys p {
+    padding-bottom: 14px;
+  }
+}
+.mainContentSectionArea .mainContentContainer .featured .headerName .journeys a {
+  padding: 1em 0.3em 1em 0.3em;
+  position: relative;
+  font-family: "Klavika Lt", Helvetica, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+  border-bottom: 3px solid #90dbef;
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 766px) {
+  .mainContentSectionArea .mainContentContainer .featured .headerName .journeys a {
+    display: flex;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1111px) {
+  .mainContentSectionArea .mainContentContainer .featured .headerName .journeys a {
+    font-size: 14px;
+  }
+}
+.mainContentSectionArea .mainContentContainer .featured .headerName .journeys a:hover {
+  opacity: 0.8;
+  transition: all 0.2s ease-in-out;
+  animation: flicker 0.2s ease-in-out;
+}
+@keyframes flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.mainContentSectionArea .mainContentContainer .featured .headerName .journeys a:hover::before {
+  transform: scaleX(0);
+  transition: 0.2s ease-in-out;
+}
+.mainContentSectionArea .mainContentContainer .featured .headerName .journeys a::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% + 8px);
+  background: #06060f;
+  transition: 0.2s ease-in-out;
+  transform: scaleX(1);
+}
+.mainContentSectionArea .mainContentContainer .featured .headerName .journeys a::after {
+  content: "";
+  height: 1px;
+  border-bottom: 1px solid rgba(246, 246, 246, 0.2);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+}
+.mainContentSectionArea .mainContentContainer .featured .headerName .journeys a span {
+  z-index: 3;
+  position: relative;
+}
+.mainContentSectionArea .mainContentContainer .featured .headerName .journeys a.cd-tabs__item--selected {
+  opacity: 1;
+  color: #90dbef;
+  font-family: "Klavika Md", Helvetica, sans-serif;
+  position: relative;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border-bottom: 3px solid #90dbef;
+}
+.mainContentSectionArea .mainContentContainer .featured .headerName .journeys a.cd-tabs__item--selected::before {
+  transform: scaleX(0);
 }
 .mainContentSectionArea .mainContentContainer .featured .featured-grid {
   display: grid;
@@ -1576,11 +1684,12 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   left: 3em;
   z-index: 11;
   transition: left 0.3s ease-in-out;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner .thumb-hover .thumb-hover-info p {
   margin: 0;
   padding: 0;
+  color: rgb(255, 255, 255);
 }
 .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner .thumb-hover .thumb-hover-info p .title {
   font-size: 2.125rem;

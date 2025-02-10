@@ -300,10 +300,89 @@
                     @include header1;
 
                 }
-                p{
-                    @include paragraphStyle;
+                .journeys{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    p{
+                        @include paragraphStyle;
+                        @include biggerPhone{
+                            padding-bottom: 14px;
+                        }
+                    }
+                    a{
+                        padding: 1em .3em 1em .3em;
+                        position: relative; 
+                         font-family: $klavika-light;
+                         font-size: 14px;
+                         text-transform: uppercase;
+                         opacity: .7;
+                         letter-spacing: .2em;
+                         opacity: 0.6;
+                         border-bottom: 3px solid rgba($font-color-third, $alpha: 1);
+                         transition: all 0.2s ease-in-out;
+                         @include biggerPhone{
+                             display: flex;
+                             text-align: center;
+                         }
+                         @include tablet{
+                         font-size: 14px;
 
-                }
+                         }
+                         &:hover{
+                             opacity: 0.8;
+                             transition: all 0.2s ease-in-out;
+                             @include tabFlicker;
+                             &::before{
+                            transform: scaleX(0);
+                            transition: 0.2s ease-in-out;
+
+                             }
+                         }
+                         &::before{
+                            content: '';
+                            position: absolute;
+                            top: -4px;
+                            left: 3px;
+                            width: calc(100% + -6px);
+                            height: calc(100% - -8px);
+                            background: #06060f;
+                            transition: 0.2s ease-in-out;
+                            transform: scaleX(1);
+                        } 
+                        &::after{
+                            content: '';
+                            height: 1px;
+                            border-bottom: 1px solid rgba(246, 246, 246, 0.2);
+                            position: absolute;
+                            bottom: -2px;
+                            left: 0;
+                            right: 0;
+                        }
+                        span{
+                            z-index: 3;
+                            position: relative;
+                             }
+                             &.cd-tabs__item--selected{
+                                 
+                                  opacity: 1;
+                                  color: $font-color-third;
+                                  font-family: $klavika-medium;
+                                  position: relative;
+                                  border: none;
+                                  display: flex;
+                                  justify-content: center;
+                                  align-items: center;
+                                  outline: none;
+                                  border-bottom: 3px solid rgba($font-color-third, $alpha: 1);
+                                  &::before{
+                                 transform: scaleX(0);
+ 
+                                     }
+                                 }
+                            }
+                }  
             }
             .featured-grid{
                 display: grid;
@@ -346,8 +425,8 @@
 
                                     }
                                     .thumb-hover-info{
-                                        left: 4em;
-                                         transition: left 0.3s ease-in-out;
+                                       left: 4em;
+                                       transition: left 0.3s ease-in-out;
 
                                     }
                                 }
@@ -380,13 +459,15 @@
                                 .thumb-hover-info{
                                     position: absolute;
                                     bottom: 30px;
-                                    left: 3em;
+                                    left: 3em;                     
+                                  // background:linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
                                     z-index: 11;
                                      transition: left 0.3s ease-in-out;
-                                     text-shadow: (1px 2px 4px rgba(0, 0, 0, 0.2));
+                                     text-shadow: (1px 2px 2px rgba(0, 0, 0, 0.5));
                                     p{
                                         margin: 0;
                                         padding: 0;
+                                        color: rgba(255,255,255,1);
                                         .title{
                                             @include fontSize(34px);
                                             @include letterSpacing(6px); 
