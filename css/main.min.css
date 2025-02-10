@@ -1637,6 +1637,11 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
 .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner {
   background-color: black;
 }
+@media (max-width: 766px) {
+  .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner {
+    height: 160px;
+  }
+}
 .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner:hover .thumb-hover {
   opacity: 1;
   filter: alpha(opacity=100);

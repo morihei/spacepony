@@ -415,6 +415,9 @@
                         }
                         .thumb-inner{
                             background-color: black;
+                            @include biggerPhone{
+                                height: 160px;
+                            }
                             &:hover{
                                 .thumb-hover{
                                     @include opacity(1);
