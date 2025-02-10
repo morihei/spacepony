@@ -3663,6 +3663,9 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   .mainContentSectionArea .mainContentContainer .gallery-screens {
     padding: 0;
   }
+  .mainContentSectionArea .mainContentContainer .gallery-screens.design-language {
+    padding-bottom: 7em;
+  }
 }
 .mainContentSectionArea .mainContentContainer .gallery-screens .screensContainer {
   display: grid;

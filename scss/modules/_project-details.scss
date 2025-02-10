@@ -220,6 +220,9 @@
                 padding-bottom: 6em;
             }
             @include biggerPhone{
+                &.design-language{
+                    padding-bottom: 7em;
+                }
                 padding: 0;
             }
             .screensContainer{
