@@ -323,6 +323,7 @@
                          border-bottom: 3px solid rgba($font-color-third, $alpha: 1);
                          transition: all 0.2s ease-in-out;
                          @include biggerPhone{
+                            
                              display: flex;
                              text-align: center;
                          }
@@ -432,6 +433,10 @@
                                 }
                             }
                             .thumb-hover{
+                                @include biggerPhone{
+                                    @include opacity(1);
+                                    
+                                }
                                 @include opacity(0);
                                 transition: opacity 0.3s ease-in-out;
 
@@ -460,7 +465,14 @@
                                     position: absolute;
                                     bottom: 30px;
                                     left: 3em;                     
-                                  // background:linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
+                                  
+                                  @include biggerPhone{
+                                    bottom: 0;
+                                    left: 0 !important;
+                                    right: 0;
+                                    background:linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 100%);
+                                    transition: none;
+                                  }
                                     z-index: 11;
                                      transition: left 0.3s ease-in-out;
                                      text-shadow: (1px 2px 2px rgba(0, 0, 0, 0.5));
@@ -468,13 +480,24 @@
                                         margin: 0;
                                         padding: 0;
                                         color: rgba(255,255,255,1);
+                                        @include biggerPhone{
+                                            padding-left: 20px;
+                                            padding-bottom: 10px;
+                                        }
                                         .title{
                                             @include fontSize(34px);
                                             @include letterSpacing(6px); 
                                             font-family: $klavika-medium;
                                             text-transform: uppercase;
+                                            @include biggerPhone{
+                                                @include fontSize(24px);
+                                                @include letterSpacing(3px); 
+                                            }
                                         }
                                         .category{
+                                            @include biggerPhone{
+                                                margin-top: 0;
+                                            }
                                             margin-top: 5px;
                                             display: flex;
                                             @include paragraphStyle;
