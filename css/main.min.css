@@ -1639,7 +1639,7 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
 }
 @media (max-width: 766px) {
   .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner {
-    height: 160px;
+    height: 165px;
   }
 }
 .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner:hover .thumb-hover {
@@ -1725,7 +1725,7 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
 }
 @media (max-width: 766px) {
   .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner .thumb-hover .thumb-hover-info p .title {
-    font-size: 1.5rem;
+    font-size: 1.625rem;
     letter-spacing: 0.1875rem;
   }
 }
@@ -3184,7 +3184,8 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
 }
 @media (max-width: 766px) {
   .mainContentSectionArea .mainContentContainer .projectList .projectListWrapper .projectListContainer .cd-tabs__panel .projectOuter .thumb-hover-info-project .header-holder .title {
-    font-size: 2.125rem;
+    font-size: 2rem;
+    letter-spacing: 0.25rem;
   }
 }
 .mainContentSectionArea .mainContentContainer .projectList .projectListWrapper .projectListContainer .cd-tabs__panel .projectOuter .thumb-hover-info-project .header-holder .category {
@@ -3361,7 +3362,7 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
 }
 @media (max-width: 766px) {
   .mainContentSectionArea .mainContentContainer .projectList .projectListWrapper .projectListContainer .cd-tabs__panel .projectOuter .project a .thumb-inner img {
-    min-height: 150px;
+    min-height: 165px;
   }
 }
 .mainContentSectionArea .mainContentContainer .projectList .projectListWrapper .projectListContainer .cd-tabs__panel .projectOuter .project a .thumb-inner img:first-child, .mainContentSectionArea .mainContentContainer .projectList .projectListWrapper .projectListContainer .cd-tabs__panel .projectOuter .project a .thumb-inner img:nth-child(4), .mainContentSectionArea .mainContentContainer .projectList .projectListWrapper .projectListContainer .cd-tabs__panel .projectOuter .project a .thumb-inner img:nth-child(7) {

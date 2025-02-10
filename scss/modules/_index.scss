@@ -416,7 +416,7 @@
                         .thumb-inner{
                             background-color: black;
                             @include biggerPhone{
-                                height: 160px;
+                                height: 165px;
                             }
                             &:hover{
                                 .thumb-hover{
@@ -493,7 +493,7 @@
                                             font-family: $klavika-medium;
                                             text-transform: uppercase;
                                             @include biggerPhone{
-                                                @include fontSize(24px);
+                                                @include fontSize(26px);
                                                 @include letterSpacing(3px); 
                                             }
                                         }
