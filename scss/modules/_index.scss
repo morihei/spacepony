@@ -159,6 +159,13 @@
             .whatIsHolder{
                 display: flex;
                 justify-content: space-between;
+                @include biggerPhone{ 
+                    display: flow;
+                    .info-pony{
+                        padding-bottom: 7em;
+                    }
+                }
+               
                 .info-pony, .info, .socials{
                     flex-basis: 47%;
                     h1{

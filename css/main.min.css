@@ -1213,6 +1213,14 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 766px) {
+  .mainContentSectionArea .mainContentContainer .whatIs .infoContainer .whatIsHolder {
+    display: flow;
+  }
+  .mainContentSectionArea .mainContentContainer .whatIs .infoContainer .whatIsHolder .info-pony {
+    padding-bottom: 7em;
+  }
+}
 .mainContentSectionArea .mainContentContainer .whatIs .infoContainer .whatIsHolder .info-pony, .mainContentSectionArea .mainContentContainer .whatIs .infoContainer .whatIsHolder .info, .mainContentSectionArea .mainContentContainer .whatIs .infoContainer .whatIsHolder .socials {
   flex-basis: 47%;
 }
