@@ -304,6 +304,9 @@
                        height: 9px; 
                        margin: 15px;
                        transition: margin 0.3s ease;
+                       @include biggerPhone{
+                        margin: 6px;
+                       }
                        
                    }
                    .scrollArrowRight{ 

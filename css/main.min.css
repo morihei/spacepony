@@ -3801,6 +3801,11 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
   margin: 15px;
   transition: margin 0.3s ease;
 }
+@media (max-width: 766px) {
+  .mainContentSectionArea .mainContentContainer .gallery-screens .swiper-container .scrollDirecion .bullet {
+    margin: 6px;
+  }
+}
 .mainContentSectionArea .mainContentContainer .gallery-screens .swiper-container .scrollDirecion .scrollArrowRight {
   margin-right: 5px;
   display: flex;
