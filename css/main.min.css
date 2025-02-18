@@ -1647,7 +1647,7 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
 }
 @media (max-width: 766px) {
   .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner {
-    height: 165px;
+    height: 210px;
   }
 }
 .mainContentSectionArea .mainContentContainer .featured .featured-grid .project a .thumb-inner:hover .thumb-hover {
@@ -3324,6 +3324,11 @@ footer .footerContainer .footerWrapper .bottomFooter .copyright {
 .mainContentSectionArea .mainContentContainer .projectList .projectListWrapper .projectListContainer .cd-tabs__panel .projectOuter .project a .thumb-inner {
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 766px) {
+  .mainContentSectionArea .mainContentContainer .projectList .projectListWrapper .projectListContainer .cd-tabs__panel .projectOuter .project a .thumb-inner {
+    height: 185px;
+  }
 }
 .mainContentSectionArea .mainContentContainer .projectList .projectListWrapper .projectListContainer .cd-tabs__panel .projectOuter .project a .thumb-inner:hover .thumb-hover {
   opacity: 1;

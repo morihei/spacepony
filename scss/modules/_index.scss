@@ -423,7 +423,7 @@
                         .thumb-inner{
                             background-color: black;
                             @include biggerPhone{
-                                height: 165px;
+                                height: 210px;
                             }
                             &:hover{
                                 .thumb-hover{

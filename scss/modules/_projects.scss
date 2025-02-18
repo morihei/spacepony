@@ -366,6 +366,9 @@
                             .thumb-inner{
                                 position: relative;
                                 overflow: hidden;
+                                @include biggerPhone{
+                                    height: 185px;
+                                }
                                 &:hover{
                                     .thumb-hover{
                                         @include opacity(1);
